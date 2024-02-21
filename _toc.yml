@@ -5,5 +5,5 @@ format: jb-book
 root: intro
 chapters:
 - file: hardware
-- file: notebooks
+- file: programming
 - file: learning-modules
