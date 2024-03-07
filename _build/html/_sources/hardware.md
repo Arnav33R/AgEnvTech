@@ -43,31 +43,7 @@ This Wi-Fi module connects to your Propeller Activity Board, allowing you to ope
 ### Connect Wi-Fi Module to Propeller Board
 
 - Set the board's power switch to 1
-- Run an example program like this one to test the module's firmware and communication with the Propeller board:
-
-```c
-/*
-  Hello Message.c
-
-  Display a hello message in the serial terminal.
-
-  http://learn.parallax.com/propeller-c-start-simple/simple-hello-message
-*/
-
-#include "simpletools.h"                      // Include simpletools header
-
-int main()                                    // main function
-{
-  print("Hello!!!");                          // Display a message
-}
-```
-
-- Set the board's power switch to 0
-- Make sure the corners of the module with white triangles are to the left
-- Line up the module pins with the sockets.
-- Press down firmly so that the Wi-Fi module sinks into the socket.
-
-![image](wiring-Wifi-ABWX.png)
+- Run an example program 
 
 ### Join Module's Wi-Fi
 
