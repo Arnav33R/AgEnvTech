@@ -4,6 +4,18 @@
 format: jb-book
 root: intro
 chapters:
-- file: hardware
-- file: programming
-- file: learning-modules
+  - file: hardware
+    sections:
+      - title: Overview of Parallax Propeller Board
+        file: board1.md
+      - title: Detailed breakdown of Parallax Propeller Board
+        file: board2.md
+      - title: Our Custom Board
+        file: board3.md
+  - file: programming
+  - file: learning-modules
+    sections:
+      - title: Lab 1
+        file: module1.md
+      - title: Lab 2
+        file: module2.md
