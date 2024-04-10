@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Propeller Activity Board WX (#32912) &#8212; AgTech, IoT</title>
+    <title>Getting Started with BlocklyProp Solo &#8212; AgTech, IoT</title>
   
   
   
@@ -62,11 +62,9 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'board2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'blocklyprop';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="Custom Green Board" href="board3.html" />
-    <link rel="prev" title="Parallax Propellor Board" href="board1.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -167,11 +165,11 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active has-children"><a class="reference internal" href="hardware.html">Hardware</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="hardware.html">Hardware</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
 <li class="toctree-l2"><a class="reference internal" href="board1.html">Parallax Propellor Board</a></li>
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Detailed breakdown of Parallax Propeller Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="board2.html">Detailed breakdown of Parallax Propeller Board</a></li>
 <li class="toctree-l2"><a class="reference internal" href="board3.html">Our Custom Board</a></li>
 </ul>
 </li>
@@ -251,7 +249,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/Arnav33R/AgEnvTech/issues/new?title=Issue%20on%20page%20%2Fboard2.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Arnav33R/AgEnvTech/issues/new?title=Issue%20on%20page%20%2Fblocklyprop.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -281,7 +279,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/board2.md" target="_blank"
+      <li><a href="_sources/blocklyprop.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -363,7 +361,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Propeller Activity Board WX (#32912)</h1>
+    <h1>Getting Started with BlocklyProp Solo</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -373,13 +371,17 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-specifications">Key Specifications</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#board-features-rev-b-c">Board Features – Rev B/C</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propeller-i-o-pin-assignments">Propeller I/O Pin Assignments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensions">Dimensions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources-and-downloads">Resources and Downloads</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Resources and Downloads</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-it-s-about">What it’s about</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-need-to-get-started">What you need to get started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blocklyprop-launcher">BlocklyProp Launcher</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-launcher-ahead-of-time">Installing the Launcher Ahead of Time</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-blocklyprop-solo">Opening BlocklyProp Solo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-your-hardware">Connect your Hardware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-project">Create a Project</a></li>
+</ul>
+</li>
 </ul>
             </nav>
         </div>
@@ -391,182 +393,81 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="propeller-activity-board-wx-32912">
-<h1>Propeller Activity Board WX (#32912)<a class="headerlink" href="#propeller-activity-board-wx-32912" title="Permalink to this heading">#</a></h1>
-<p>(The content on this page has been developed thanks to the official Parallax <a class="reference external" href="https://learn.parallax.com/">website</a>)</p>
-<p>The Propeller Activity Board WX features the 8-core Propeller microcontroller pre-wired to a host of popular peripherals for fast and fun experiments. Learn or teach the basics of electronics, programming, and robotics with this versatile board. Explore our free web tutorials for graphical BlocklyProp code-building or text-based C-language programming at <a class="reference external" href="http://learn.parallax.com">learn.parallax.com</a>.</p>
-<p>The WX version of the Propeller Activity Board expands upon the functionality of the original (#32910). There’s more current for your projects with independent 1.8 amp 3.3 V and 5 V switching regulators, an upgrade from audio-out-only to a Mini TRRS audio/video (or audio/mic) jack, and selectable wireless socket/USB communication between host computer and the Propeller chip (RF module not included!)</p>
-<section id="features">
-<h2>Features<a class="headerlink" href="#features" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Built-in 8-core Propeller P8X32A microcontroller, 64 KB EEPROM, and 5 MHz crystal oscillator</p></li>
-<li><p>Solder-free prototyping with breadboard and header sockets for power and I/O</p></li>
-<li><p>Six servo/sensor ports with power-select jumpers</p></li>
-<li><p>Automatically selects between USB and external power sources and provides USB over-current protection</p></li>
-<li><p>Center-positive 2.1 mm barrel jack for external power supplies</p></li>
-<li><p>Convenient reset button and 3-position power switch</p></li>
-<li><p>Onboard mini stereo-audio jack with microphone/video pass-through</p></li>
-<li><p>Built-in microSD card slot for data logging or storing WAV files</p></li>
-<li><p>Wireless Module socket accepts RF modules to simplify remote management</p></li>
-<li><p>Dedicated analog header sockets provide four A/D 12-bit inputs and two buffered variable-resolution D/A outputs</p></li>
-<li><p>Indicator lights show the status of system power, servo power, programming source, DAC output levels, wireless communication activity, and USB communication activity</p></li>
-<li><p>3.3 V and 5 V switching voltage regulators with independent 1.8 amp outputs</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-blocklyprop-solo">
+<h1>Getting Started with BlocklyProp Solo<a class="headerlink" href="#getting-started-with-blocklyprop-solo" title="Permalink to this heading">#</a></h1>
+<p><strong>Date</strong>: 10/04/2024<br />
+<strong>Time</strong>: 07:47</p>
+<p><strong>Link</strong>: <a class="reference external" href="https://learn.parallax.com/print/book/export/html/2113">Getting Started with BlocklyProp Solo</a></p>
+<section id="what-it-s-about">
+<h2>What it’s about<a class="headerlink" href="#what-it-s-about" title="Permalink to this heading">#</a></h2>
+<p>BlocklyProp Solo is a visual online programming tool designed to work with robots and development boards featuring a Propeller 1 Multicore Microcontroller brain, such as the ActivityBot 360° and Propeller FLiP module. It allows users to build Propeller programs graphically, using specialized blocks to support sensors, servo motors, displays, and more.</p>
 </section>
-<section id="key-specifications">
-<h2>Key Specifications<a class="headerlink" href="#key-specifications" title="Permalink to this heading">#</a></h2>
+<section id="what-you-need-to-get-started">
+<h2>What you need to get started<a class="headerlink" href="#what-you-need-to-get-started" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Power requirements:</p>
+<li><p>A Windows, Mac, or Chromebook computer with a USB 2.0 compatible port</p></li>
+<li><p>Permission to install BlocklyProp Launcher software (*Schools may need IT assistance)</p></li>
+<li><p>Chrome browser (Explorer and Edge are not supported)</p></li>
+<li><p>A Propeller board with its USB programming cable, such as:</p>
 <ul>
-<li><p>Rev A: 6–15 VDC from an external power supply, or 5 V from a USB port</p></li>
-<li><p>Rev B/C: 6–24 VDC from an external power supply, or 5 V from a USB port</p></li>
+<li><p><a class="reference external" href="https://www.parallax.com/product/32600">ActivityBot 360°</a></p></li>
+<li><p><a class="reference external" href="https://www.parallax.com/product/32912">Propeller Activity Board WX</a></p></li>
+<li><p><a class="reference external" href="https://www.parallax.com/product/32123">Propeller FLiP Module</a></p></li>
 </ul>
 </li>
-<li><p>Communication: USB mini-B (onboard serial over USB)</p></li>
-<li><p>Dimensions: 4.0 x 3.05 x 0.625 in (10.16 x 7.75 x 1.59 cm)</p></li>
-<li><p>Operating temp range: +32 to +158 °F (0 to +70 °C)</p></li>
+</ul>
+<p>For assistance, contact <a class="reference external" href="mailto:support&#37;&#52;&#48;parallax&#46;com">support<span>&#64;</span>parallax<span>&#46;</span>com</a> or call the Educator Hotline (916) 701-8625.</p>
+<p>(*The Launcher allows a USB connection for downloading code to your Propeller board. BlocklyProp Solo and the Launcher do not require any login and do not collect any user data.)</p>
+</section>
+<section id="blocklyprop-launcher">
+<h2>BlocklyProp Launcher<a class="headerlink" href="#blocklyprop-launcher" title="Permalink to this heading">#</a></h2>
+<p>BlocklyProp Solo, despite being an online programming tool, requires a utility on your computer to establish a USB programming connection with your Propeller board.</p>
+<section id="installing-the-launcher-ahead-of-time">
+<h3>Installing the Launcher Ahead of Time<a class="headerlink" href="#installing-the-launcher-ahead-of-time" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Download and install the <a class="reference external" href="https://www.parallax.com/package/blocklyprop-solo-launcher-and-faq-for-schools-downloads/">BlocklyProp Launcher</a> for Windows or Mac, or get the extension for Chromebook, from the Parallax store site.</p></li>
+<li><p>Alternatively, get the latest Launcher through BlocklyProp Solo itself by following the provided steps.</p></li>
+</ul>
+<p>…</p>
+<p>For more details, please visit the <a class="reference external" href="https://learn.parallax.com/tutorials/language/blocklyprop/getting-started-blocklyprop-solo">source URL</a>.
+…</p>
+</section>
+</section>
+<section id="opening-blocklyprop-solo">
+<h2>Opening BlocklyProp Solo<a class="headerlink" href="#opening-blocklyprop-solo" title="Permalink to this heading">#</a></h2>
+<p>Once BlocklyProp Solo is open in Chrome and the Launcher and drivers are installed, proceed to connect your hardware and run your first project.</p>
+<section id="connect-your-hardware">
+<h3>Connect your Hardware<a class="headerlink" href="#connect-your-hardware" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Connect your Propeller board to your computer’s USB port with its programming cable.</p></li>
+<li><p>Ensure the Propeller Activity Board’s power switch is in position 1 if you’re using it.</p></li>
+<li><p>Both the Propeller Activity Board and the Propeller FLiP module are powered through the USB connection.</p></li>
 </ul>
 </section>
-<section id="board-features-rev-b-c">
-<h2>Board Features – Rev B/C<a class="headerlink" href="#board-features-rev-b-c" title="Permalink to this heading">#</a></h2>
+<section id="create-a-project">
+<h3>Create a Project<a class="headerlink" href="#create-a-project" title="Permalink to this heading">#</a></h3>
+<p>BlocklyProp programs, also known as “projects,” are built graphically using blocks.</p>
 <ol class="arabic simple">
-<li><p><strong>Propeller Multicore Microcontroller System</strong></p>
-<ul class="simple">
-<li><p>64 Kilobyte I2C EEPROM for program and data storage</p></li>
-<li><p>8 core Propeller P8X32A microcontroller</p></li>
-<li><p>5 MHz crystal oscillator</p></li>
-</ul>
-</li>
-<li><p><strong>Power Jack</strong></p>
-<ul class="simple">
-<li><p>2.1 mm center-positive power jack accepting 6 to 24 VDC (max 15 VDC recommended)</p></li>
-<li><p>Suitable for remote applications and robotics</p></li>
-</ul>
-</li>
-<li><p><strong>1.8 A Voltage Regulators</strong></p>
-<ul class="simple">
-<li><p>5 V and 3.3 V switching regulators with up to 1.8 A output each</p></li>
-<li><p>Power available through sockets along the breadboard</p></li>
-</ul>
-</li>
-<li><p><strong>Servo Headers</strong></p>
-<ul class="simple">
-<li><p>Six servo ports for connecting servos and other devices</p></li>
-<li><p>Power-select jumpers for each port</p></li>
-</ul>
-</li>
-<li><p><strong>3.3V / 5V Power Access</strong></p>
-<ul class="simple">
-<li><p>Positive 3.3 V and 5 V supply sockets for powering circuits on the breadboard</p></li>
-</ul>
-</li>
-<li><p><strong>Breadboard</strong></p>
-<ul class="simple">
-<li><p>34 5-socket rows for solder-free prototyping</p></li>
-</ul>
-</li>
-<li><p><strong>GND, D/A, A/D Access</strong></p>
-<ul class="simple">
-<li><p>Access sockets for ground, digital to analog, and analog to digital connections</p></li>
-</ul>
-</li>
-<li><p><strong>D/A Activity Lights</strong></p>
-<ul class="simple">
-<li><p>Yellow LEDs indicating output voltage at D/A sockets 0 and 1</p></li>
-</ul>
-</li>
-<li><p><strong>Analog/Digital Converter</strong></p>
-<ul class="simple">
-<li><p>12-bit ADC for monitoring voltage at analog inputs A/D 0, 1, 2, and 3</p></li>
-</ul>
-</li>
-<li><p><strong>Propeller I/O Pin Access</strong></p>
-<ul class="simple">
-<li><p>Access to Propeller I/O pins P0 to P15</p></li>
-</ul>
-</li>
-<li><p><strong>WX Wireless Access &amp; Communication Header</strong></p>
-<ul class="simple">
-<li><p>Header for wireless module connection and communication</p></li>
-</ul>
-</li>
-<li><p><strong>Power Switch</strong></p>
-<ul class="simple">
-<li><p>Three settings: off, microcontroller power, and servo ports power</p></li>
-</ul>
-</li>
-<li><p><strong>Reset Button</strong></p>
-<ul class="simple">
-<li><p>Restart or reset the Propeller microcontroller’s program</p></li>
-</ul>
-</li>
-<li><p><strong>Audio/Video Jack</strong></p>
-<ul class="simple">
-<li><p>TRRS A/V jack for audio output and microphone/video pass-through</p></li>
-</ul>
-</li>
-<li><p><strong>USB Port</strong></p>
-<ul class="simple">
-<li><p>For loading programs, serial-over-USB communications, and power supply</p></li>
-</ul>
-</li>
-<li><p><strong>USB Activity LEDs</strong></p>
-<ul class="simple">
-<li><p>Blue and red LEDs indicating USB communication activity</p></li>
-</ul>
-</li>
-<li><p><strong>Wireless Activity Lights</strong></p>
-<ul class="simple">
-<li><p>LEDs indicating wireless module activity</p></li>
-</ul>
-</li>
-<li><p><strong>microSD Card Socket</strong></p>
-<ul class="simple">
-<li><p>Socket for accessing files from a microSD card</p></li>
-</ul>
-</li>
-<li><p><strong>WX Wireless Communication Module Socket</strong></p>
-<ul class="simple">
-<li><p>Socket for wireless communication modules</p></li>
-</ul>
-</li>
-<li><p><strong>Programming Selector Indicator LEDs</strong></p>
-<ul class="simple">
-<li><p>Indicators for selected programming source</p></li>
-</ul>
-</li>
+<li><p>In the Edit pane, select blocks from the gray block menu to build your project.</p></li>
+<li><p>For example, click on “Communicate,” then “Terminal” to access terminal blocks.</p></li>
+<li><p>Drag and drop the desired blocks into the Editor pane.</p></li>
+<li><p>From the port dropdown menu, select the COM port connected to your Propeller board.</p></li>
+<li><p>Click the arrow button to run the project once. (It won’t be saved to the memory on your Propeller board.)</p></li>
 </ol>
-</section>
-<section id="propeller-i-o-pin-assignments">
-<h2>Propeller I/O Pin Assignments<a class="headerlink" href="#propeller-i-o-pin-assignments" title="Permalink to this heading">#</a></h2>
+<p>…</p>
+<p>For the complete tutorial, including instructions on saving projects and troubleshooting, please visit the <a class="reference external" href="https://learn.parallax.com/tutorials/language/blocklyprop/getting-started-blocklyprop-solo">source URL</a>.</p>
+<p><strong>Discussion Forums</strong>: <a class="reference external" href="https://forums.parallax.com/">PARALLAX INC. STORE</a><br />
+<strong>About</strong> | <strong>Terms of Use</strong> | <strong>Feedback</strong>: <a class="reference external" href="mailto:learn&#37;&#52;&#48;parallax&#46;com">learn<span>&#64;</span>parallax<span>&#46;</span>com</a> | <strong>Copyright</strong> © Parallax Inc. 2024</p>
+<p><strong>Links</strong>:</p>
 <ul class="simple">
-<li><p>Detailed listing of I/O pin functions</p></li>
-</ul>
-</section>
-<section id="dimensions">
-<h2>Dimensions<a class="headerlink" href="#dimensions" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Measurements of the board</p></li>
-</ul>
-</section>
-<section id="resources-and-downloads">
-<h2>Resources and Downloads<a class="headerlink" href="#resources-and-downloads" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Links to product page and online tutorials</p></li>
+<li><p><a class="reference external" href="https://www.parallax.com/product/32600">ActivityBot 360°</a></p></li>
+<li><p><a class="reference external" href="https://www.parallax.com/product/32912">Propeller Activity Board WX</a></p></li>
+<li><p><a class="reference external" href="https://www.parallax.com/product/32123">Propeller FLiP Module</a></p></li>
+<li><p><a class="reference external" href="https://www.parallax.com/package/blocklyprop-solo-launcher-and-faq-for-schools-downloads/">BlocklyProp Launcher</a></p></li>
+<li><p><a class="reference external" href="https://solo.parallax.com">BlocklyProp Solo</a></p></li>
+<li><p><a class="reference external" href="https://learn.parallax.com/tutorials/language/blocklyprop/getting-started-blocklyprop-solo/connect-and-program">Connect and Program</a></p></li>
 </ul>
 </section>
-<section id="id1">
-<h2>Resources and Downloads<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p><a class="reference external" href="https://www.parallax.com/search/?q=32912">Propeller Activity Board WX product page</a></p></li>
-<li><p>Online tutorials:</p>
-<ul>
-<li><p><a class="reference external" href="http://learn.parallax.com/propeller-c-tutorials">C language</a></p></li>
-<li><p><a class="reference external" href="http://learn.parallax.com/tutorials/language/blocklyprop">BlocklyProp language</a></p></li>
-<li><p><a class="reference external" href="http://learn.parallax.com/tutorials/activitybot">ActivityBot robot</a></p></li>
-</ul>
-</li>
-</ul>
 </section>
 </section>
 
@@ -600,24 +501,6 @@ document.write(`
                 <footer class="prev-next-footer">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
-    <a class="left-prev"
-       href="board1.html"
-       title="previous page">
-      <i class="fa-solid fa-angle-left"></i>
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">Parallax Propellor Board</p>
-      </div>
-    </a>
-    <a class="right-next"
-       href="board3.html"
-       title="next page">
-      <div class="prev-next-info">
-        <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title">Custom Green Board</p>
-      </div>
-      <i class="fa-solid fa-angle-right"></i>
-    </a>
 </div>
                 </footer>
               
@@ -633,13 +516,17 @@ document.write(`
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#features">Features</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#key-specifications">Key Specifications</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#board-features-rev-b-c">Board Features – Rev B/C</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#propeller-i-o-pin-assignments">Propeller I/O Pin Assignments</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#dimensions">Dimensions</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#resources-and-downloads">Resources and Downloads</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">Resources and Downloads</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-it-s-about">What it’s about</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-need-to-get-started">What you need to get started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blocklyprop-launcher">BlocklyProp Launcher</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-launcher-ahead-of-time">Installing the Launcher Ahead of Time</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-blocklyprop-solo">Opening BlocklyProp Solo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-your-hardware">Connect your Hardware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-project">Create a Project</a></li>
+</ul>
+</li>
 </ul>
   </nav></div>
 

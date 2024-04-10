@@ -1,5 +1,7 @@
 # Propeller Activity Board WX (#32912)
 
+(The content on this page has been developed thanks to the official Parallax [website](https://learn.parallax.com/))
+
 The Propeller Activity Board WX features the 8-core Propeller microcontroller pre-wired to a host of popular peripherals for fast and fun experiments. Learn or teach the basics of electronics, programming, and robotics with this versatile board. Explore our free web tutorials for graphical BlocklyProp code-building or text-based C-language programming at [learn.parallax.com](http://learn.parallax.com).
 
 The WX version of the Propeller Activity Board expands upon the functionality of the original (#32910). There’s more current for your projects with independent 1.8 amp 3.3 V and 5 V switching regulators, an upgrade from audio-out-only to a Mini TRRS audio/video (or audio/mic) jack, and selectable wireless socket/USB communication between host computer and the Propeller chip (RF module not included!)

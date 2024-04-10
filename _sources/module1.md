@@ -23,9 +23,7 @@
 ### Instructions
 Please follow the instructions on the [website](https://learn.parallax.com/tutorials/language/blocklyprop/getting-started-blocklyprop-solo).
 - This assignment has three steps shown on the top left. Please follow the instructions for each step. Please start from the first one (BlocklyProp Launcher). You can then go to the next step either by clicking on the top left menu (Connect and Program) or simply by clicking on the menu (Connect and Program) shown at the bottom of the page.
-Alternatively, you can follow the steps in the `Lab_1_Getting Started with BlocklyProp Solo.pdf`.
-Menu on the top left side of the website.
-
+Alternatively, you can follow the steps in the `Lab_1_Getting Started with BlocklyProp Solo.pdf` menu on the top left side of the website or through this markdown [page](blocklyprop.md)
 ![Alt text](lab1_pic1.png)
 
 ### Step 1. BlocklyProp Launcher
