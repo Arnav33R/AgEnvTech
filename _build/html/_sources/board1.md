@@ -1,6 +1,8 @@
 (section-label)=
 ## Parallax Propellor Board
 
+(The content on this page has been developed thanks to the official Parallax [website](https://learn.parallax.com/support/reference/using-propeller-activity-board))
+
 The Parallax Propeller Activity Board WX is an affordable and fully-featured development board designed for Propeller projects. It comes equipped with a mini solderless breadboard, expanded I/O headers, and both 3.3V and 5V power regulators, allowing users to easily build Kickstart demonstration projects or Propeller C tutorials.
 
 ![image](board.png)

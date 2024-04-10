@@ -12,7 +12,7 @@ chapters:
         file: board2.md
       - title: Our Custom Board
         file: board3.md
-  - file: programming
+  #- file: programming
   - file: learning-modules
     sections:
       - title: Lab 1
