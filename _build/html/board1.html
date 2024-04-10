@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Learning Modules &#8212; AgTech, IoT</title>
+    <title>Parallax Propellor Board &#8212; AgTech, IoT</title>
   
   
   
@@ -62,9 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'markdown-notebooks';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'board1';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Propeller Activity Board WX (#32912)" href="board2.html" />
+    <link rel="prev" title="Hardware" href="hardware.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -165,9 +167,9 @@ const thebe_selector_output = ".output, .cell_output"
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="hardware.html">Hardware</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
-<li class="toctree-l2"><a class="reference internal" href="board1.html">Parallax Propellor Board</a></li>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="hardware.html">Hardware</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Parallax Propellor Board</a></li>
 
 <li class="toctree-l2"><a class="reference internal" href="board2.html">Detailed breakdown of Parallax Propeller Board</a></li>
 <li class="toctree-l2"><a class="reference internal" href="board3.html">Our Custom Board</a></li>
@@ -250,7 +252,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/Arnav33R/AgEnvTech/issues/new?title=Issue%20on%20page%20%2Fmarkdown-notebooks.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Arnav33R/AgEnvTech/issues/new?title=Issue%20on%20page%20%2Fboard1.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -280,7 +282,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="_sources/markdown-notebooks.md" target="_blank"
+      <li><a href="_sources/board1.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -362,7 +364,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Learning Modules</h1>
+    <h1>Parallax Propellor Board</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -372,10 +374,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Parallax Propellor Board</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#parallax-wx-wi-fi-module-for-prop-c">Parallax WX Wi-Fi Module for Prop C</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wi-fi-module-firmware">Wi-Fi Module Firmware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-wi-fi-module-to-propeller-board">Connect Wi-Fi Module to Propeller Board</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-module-s-wi-fi">Join Module’s Wi-Fi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-module-firmware">Update Module Firmware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-module-communication">Configure Module Communication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#program-the-propeller-over-wi-fi">Program the Propeller over Wi-Fi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-and-view-a-test-page">Load and View a Test Page</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-the-propeller-to-webpage-communication">Test the Propeller to Webpage Communication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-another-wi-fi-network">Join another Wi-Fi Network</a></li>
 </ul>
+</li>
+</ul>
+
             </nav>
         </div>
     </div>
@@ -386,50 +399,99 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="learning-modules">
-<h1>Learning Modules<a class="headerlink" href="#learning-modules" title="Permalink to this heading">#</a></h1>
-<p>Jupyter Book also lets you write text-based notebooks using MyST Markdown.
-See <a class="reference external" href="https://jupyterbook.org/file-types/myst-notebooks.html">the Notebooks with MyST Markdown documentation</a> for more detailed instructions.
-This page shows off a notebook written in MyST Markdown.</p>
-<section id="an-example-cell">
-<h2>An example cell<a class="headerlink" href="#an-example-cell" title="Permalink to this heading">#</a></h2>
-<p>With MyST Markdown, you can define code cells with a directive like so:</p>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="mi">2</span> <span class="o">+</span> <span class="mi">2</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
-</pre></div>
-</div>
-</div>
-</div>
-<p>When your book is built, the contents of any <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> blocks will be
-executed with your default Jupyter kernel, and their outputs will be displayed
-in-line with the rest of your content.</p>
-<div class="admonition seealso">
-<p class="admonition-title">See also</p>
-<p>Jupyter Book uses <a class="reference external" href="https://jupytext.readthedocs.io/en/latest/">Jupytext</a> to convert text-based files to notebooks, and can support <a class="reference external" href="https://jupyterbook.org/file-types/jupytext.html">many other text-based notebook files</a>.</p>
-</div>
+  <section id="parallax-propellor-board">
+<span id="section-label"></span><h1>Parallax Propellor Board<a class="headerlink" href="#parallax-propellor-board" title="Permalink to this heading">#</a></h1>
+<p>The Parallax Propeller Activity Board WX is an affordable and fully-featured development board designed for Propeller projects. It comes equipped with a mini solderless breadboard, expanded I/O headers, and both 3.3V and 5V power regulators, allowing users to easily build Kickstart demonstration projects or Propeller C tutorials.</p>
+<p><img alt="image" src="_images/board.png" /></p>
+<ul class="simple">
+<li><p><strong>Key Features</strong>:</p>
+<ul>
+<li><p><strong>Integrated Solderless Breadboard</strong>: The board includes a mini solderless breadboard, facilitating projects with short jumper wires like the 100mm Male-Male Jumper Wires.</p></li>
+<li><p><strong>Power Options</strong>:</p>
+<ul>
+<li><p>USB Cable: Power can be supplied via a USB cable during programming and testing. Note that USB ports typically provide up to 500 mA of current.</p></li>
+<li><p>Separate Power Supply: Alternatively, a 6-9 volt battery pack or a power adapter delivering at least 1 amp at 6 to 9 volts can be used when untethered from a computer.</p></li>
+</ul>
+</li>
+<li><p><strong>3-Position Power Switch</strong>: The board features a 3-position switch to control power distribution:</p>
+<ul>
+<li><p>Position 0: Removes power from all power pin connections.</p></li>
+<li><p>Position 1: Applies power to the breadboard power pins, excluding the six servo headers.</p></li>
+<li><p>Position 2: Applies power to both the breadboard pins and the servo headers.</p></li>
+</ul>
+</li>
+<li><p><strong>Using Servo Headers</strong>: The servo headers facilitate easy testing of Parallax continuous or standard servo motors. Additional information is available in the documentation.</p></li>
+<li><p><strong>Adapting Wiring Diagrams</strong>: Wiring diagrams from Kickstart projects can be adapted for use with the Propeller Activity Board. Depending on the original diagram:</p></li>
+</ul>
+</li>
+</ul>
+<p>If you are interested, you can learn more about the board here:</p>
+<ul class="simple">
+<li><p><span class="xref myst">Parallax Activity Board</span></p></li>
+</ul>
 </section>
-<section id="create-a-notebook-with-myst-markdown">
-<h2>Create a notebook with MyST Markdown<a class="headerlink" href="#create-a-notebook-with-myst-markdown" title="Permalink to this heading">#</a></h2>
-<p>MyST Markdown notebooks are defined by two things:</p>
-<ol class="arabic simple">
-<li><p>YAML metadata that is needed to understand if / how it should convert text files to notebooks (including information about the kernel needed).
-See the YAML at the top of this page for example.</p></li>
-<li><p>The presence of <code class="docutils literal notranslate"><span class="pre">{code-cell}</span></code> directives, which will be executed with your book.</p></li>
-</ol>
-<p>That’s all that is needed to get started!</p>
+<section id="parallax-wx-wi-fi-module-for-prop-c">
+<span id="id1"></span><h1>Parallax WX Wi-Fi Module for Prop C<a class="headerlink" href="#parallax-wx-wi-fi-module-for-prop-c" title="Permalink to this heading">#</a></h1>
+<p>This Wi-Fi module connects to your Propeller Activity Board, allowing you to open up the possibility of priojects using interactive internet and web features.</p>
+<p><img alt="image" src="_images/wifi.png" /></p>
+<section id="wi-fi-module-firmware">
+<h2>Wi-Fi Module Firmware<a class="headerlink" href="#wi-fi-module-firmware" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Go to the Parallax Wi-Fi Module Firmware and Example Files <a class="reference external" href="https://www.parallax.com/downloads/parallax-wi-fi-module-firmware-and-example-files">download page</a></p></li>
+<li><p>Download the most recent version (highest version number) 32420-Parallax-ESP…zip</p></li>
+<li><p>Unzip to a folder and make sure the words Parallax ESP and the version number are in the folder name</p></li>
+</ul>
 </section>
-<section id="quickly-add-yaml-metadata-for-myst-notebooks">
-<h2>Quickly add YAML metadata for MyST Notebooks<a class="headerlink" href="#quickly-add-yaml-metadata-for-myst-notebooks" title="Permalink to this heading">#</a></h2>
-<p>If you have a markdown file and you’d like to quickly add YAML metadata to it, so that Jupyter Book will treat it as a MyST Markdown Notebook, run the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">jupyter</span><span class="o">-</span><span class="n">book</span> <span class="n">myst</span> <span class="n">init</span> <span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">markdownfile</span><span class="o">.</span><span class="n">md</span>
+<section id="connect-wi-fi-module-to-propeller-board">
+<h2>Connect Wi-Fi Module to Propeller Board<a class="headerlink" href="#connect-wi-fi-module-to-propeller-board" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Set the board’s power switch to 1</p></li>
+<li><p>Run an example program like this one to test the module’s firmware and communication with the Propeller board:</p></li>
+</ul>
+<div class="highlight-c notranslate"><div class="highlight"><pre><span></span><span class="cm">/*</span>
+<span class="cm">  Hello Message.c</span>
+
+<span class="cm">  Display a hello message in the serial terminal.</span>
+
+<span class="cm">  http://learn.parallax.com/propeller-c-start-simple/simple-hello-message</span>
+<span class="cm">*/</span><span class="w"></span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;simpletools.h&quot;</span><span class="c1">                      // Include simpletools header</span><span class="cp"></span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span><span class="w">                                    </span><span class="c1">// main function</span>
+<span class="p">{</span><span class="w"></span>
+<span class="w">  </span><span class="n">print</span><span class="p">(</span><span class="s">&quot;Hello!!!&quot;</span><span class="p">);</span><span class="w">                          </span><span class="c1">// Display a message</span>
+<span class="p">}</span><span class="w"></span>
 </pre></div>
 </div>
+<ul class="simple">
+<li><p>Set the board’s power switch to 0</p></li>
+<li><p>Make sure the corners of the module with white triangles are to the left</p></li>
+<li><p>Line up the module pins with the sockets.</p></li>
+<li><p>Press down firmly so that the Wi-Fi module sinks into the socket.</p></li>
+</ul>
+<p><img alt="image" src="_images/wiring-Wifi-ABWX.png" /></p>
+</section>
+<section id="join-module-s-wi-fi">
+<h2>Join Module’s Wi-Fi<a class="headerlink" href="#join-module-s-wi-fi" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="update-module-firmware">
+<h2>Update Module Firmware<a class="headerlink" href="#update-module-firmware" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="configure-module-communication">
+<h2>Configure Module Communication<a class="headerlink" href="#configure-module-communication" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="program-the-propeller-over-wi-fi">
+<h2>Program the Propeller over Wi-Fi<a class="headerlink" href="#program-the-propeller-over-wi-fi" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="load-and-view-a-test-page">
+<h2>Load and View a Test Page<a class="headerlink" href="#load-and-view-a-test-page" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="test-the-propeller-to-webpage-communication">
+<h2>Test the Propeller to Webpage Communication<a class="headerlink" href="#test-the-propeller-to-webpage-communication" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="join-another-wi-fi-network">
+<h2>Join another Wi-Fi Network<a class="headerlink" href="#join-another-wi-fi-network" title="Permalink to this heading">#</a></h2>
 </section>
 </section>
 
@@ -463,6 +525,24 @@ See the YAML at the top of this page for example.</p></li>
                 <footer class="prev-next-footer">
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
+    <a class="left-prev"
+       href="hardware.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Hardware</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="board2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Propeller Activity Board WX (#32912)</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -478,10 +558,21 @@ See the YAML at the top of this page for example.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#an-example-cell">An example cell</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-notebook-with-myst-markdown">Create a notebook with MyST Markdown</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#quickly-add-yaml-metadata-for-myst-notebooks">Quickly add YAML metadata for MyST Notebooks</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#">Parallax Propellor Board</a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#parallax-wx-wi-fi-module-for-prop-c">Parallax WX Wi-Fi Module for Prop C</a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#wi-fi-module-firmware">Wi-Fi Module Firmware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-wi-fi-module-to-propeller-board">Connect Wi-Fi Module to Propeller Board</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-module-s-wi-fi">Join Module’s Wi-Fi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#update-module-firmware">Update Module Firmware</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#configure-module-communication">Configure Module Communication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#program-the-propeller-over-wi-fi">Program the Propeller over Wi-Fi</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-and-view-a-test-page">Load and View a Test Page</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#test-the-propeller-to-webpage-communication">Test the Propeller to Webpage Communication</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#join-another-wi-fi-network">Join another Wi-Fi Network</a></li>
 </ul>
+</li>
+</ul>
+
   </nav></div>
 
 </div></div>
