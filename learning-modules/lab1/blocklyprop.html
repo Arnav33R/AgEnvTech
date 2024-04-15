@@ -1,0 +1,628 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Getting Started with BlocklyProp Solo &#8212; AgTech, IoT</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'learning-modules/lab1/blocklyprop';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.jpeg" class="logo__image only-light" alt="AgTech, IoT - Home"/>
+    <script>document.write(`<img src="../../_static/logo.jpeg" class="logo__image only-dark" alt="AgTech, IoT - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    AgEnvTech: TAE 30
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../hardware/hardware.html">Hardware</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../hardware/board1.html">Parallax Propellor Board</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../hardware/board2.html">Detailed breakdown of Parallax Propeller Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hardware/board3.html">Our Custom Board</a></li>
+</ul>
+</li>
+<li class="toctree-l1 has-children"><a class="reference internal" href="../learning-modules.html">Learning Modules</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Arnav33R/AgEnvTech" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Arnav33R/AgEnvTech/issues/new?title=Issue%20on%20page%20%2Flearning-modules/lab1/blocklyprop.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/learning-modules/lab1/blocklyprop.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Getting Started with BlocklyProp Solo</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-it-s-about">What it’s about</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-need-to-get-started">What you need to get started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blocklyprop-launcher">BlocklyProp Launcher</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-launcher-ahead-of-time">Installing the Launcher Ahead of Time</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-blocklyprop-solo">Opening BlocklyProp Solo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-your-hardware">Connect your Hardware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-project">Create a Project</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-projects">Saving Projects</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-to-the-propeller-board-eeprom">Saving to the Propeller Board EEPROM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-to-the-computer">Saving to the Computer</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="getting-started-with-blocklyprop-solo">
+<h1>Getting Started with BlocklyProp Solo<a class="headerlink" href="#getting-started-with-blocklyprop-solo" title="Permalink to this heading">#</a></h1>
+<p><strong>Link</strong>: <a class="reference external" href="https://learn.parallax.com/tutorials/language/blocklyprop/getting-started-blocklyprop-solo">Getting Started with BlocklyProp Solo</a></p>
+<section id="what-it-s-about">
+<h2>What it’s about<a class="headerlink" href="#what-it-s-about" title="Permalink to this heading">#</a></h2>
+<p>BlocklyProp Solo is a visual online programming tool designed to work with robots and development boards featuring a Propeller 1 Multicore Microcontroller brain, such as the ActivityBot 360° and Propeller FLiP module. It allows users to build Propeller programs graphically, using specialized blocks to support sensors, servo motors, displays, and more.</p>
+</section>
+<section id="what-you-need-to-get-started">
+<h2>What you need to get started<a class="headerlink" href="#what-you-need-to-get-started" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>A Windows, Mac, or Chromebook computer with a USB 2.0 compatible port</p></li>
+<li><p>Permission to install BlocklyProp Launcher software (*Schools may need IT assistance)</p></li>
+<li><p>Chrome browser (Explorer and Edge are not supported)</p></li>
+<li><p>A Propeller board with its USB programming cable, such as:</p>
+<ul>
+<li><p><a class="reference external" href="https://www.parallax.com/product/32600">ActivityBot 360°</a></p></li>
+<li><p><a class="reference external" href="https://www.parallax.com/product/32912">Propeller Activity Board WX</a></p></li>
+<li><p><a class="reference external" href="https://www.parallax.com/product/32123">Propeller FLiP Module</a></p></li>
+</ul>
+</li>
+</ul>
+<p>(*The Launcher allows a USB connection for downloading code to your Propeller board. BlocklyProp Solo and the Launcher do not require any login and do not collect any user data.)</p>
+</section>
+<section id="blocklyprop-launcher">
+<h2>BlocklyProp Launcher<a class="headerlink" href="#blocklyprop-launcher" title="Permalink to this heading">#</a></h2>
+<p>BlocklyProp Solo, despite being an online programming tool, requires a utility on your computer to establish a USB programming connection with your Propeller board.</p>
+<section id="installing-the-launcher-ahead-of-time">
+<h3>Installing the Launcher Ahead of Time<a class="headerlink" href="#installing-the-launcher-ahead-of-time" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Download and install the <a class="reference external" href="https://www.parallax.com/package/blocklyprop-solo-launcher-and-faq-for-schools-downloads/">BlocklyProp Launcher</a> for Windows or Mac, or get the extension for Chromebook, from the Parallax store site.</p></li>
+<li><p>Alternatively, get the latest Launcher through BlocklyProp Solo itself by following the provided steps.</p></li>
+</ul>
+<p>For more details, please visit the <a class="reference external" href="https://learn.parallax.com/tutorials/language/blocklyprop/getting-started-blocklyprop-solo/blocklyprop-launcher">source URL</a>.</p>
+</section>
+</section>
+<section id="opening-blocklyprop-solo">
+<h2>Opening BlocklyProp Solo<a class="headerlink" href="#opening-blocklyprop-solo" title="Permalink to this heading">#</a></h2>
+<p>Once BlocklyProp Solo is open in Chrome and the Launcher and drivers are installed, proceed to connect your hardware and run your first project.</p>
+<section id="connect-your-hardware">
+<h3>Connect your Hardware<a class="headerlink" href="#connect-your-hardware" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Connect your Propeller board to your computer’s USB port with its programming cable.  Below are the Propeller FLiP module on a breadboard (left) and Propeller Activity Board WX (right).</p></li>
+</ul>
+<p><a class="reference download internal" download="" href="../../_downloads/bf26e6353f82e613d592ede15855af4f/connect.png"><span class="xref download myst">!</span></a></p>
+<ul class="simple">
+<li><p>Connect the other end of the USB cable to your computer’s USB port. Both the Propeller Activity Board and the Propeller FLiP module are powered through the USB connection.</p></li>
+<li><p>f you are using an Activity Board, you will also need to move the power switch to position 1:</p></li>
+</ul>
+</section>
+<section id="create-a-project">
+<h3>Create a Project<a class="headerlink" href="#create-a-project" title="Permalink to this heading">#</a></h3>
+<p>BlocklyProp programs are also called “projects.” In the Edit pane, you build a project by making selections from the gray block menu to the right of the Edit pane.</p>
+<ol class="arabic">
+<li><p>Click <strong>Communicate</strong>, then <strong>Terminal</strong>.</p>
+<ul class="simple">
+<li><p>A palette of Terminal blocks will appear. Notice that if you hover over a block, a yellow flyover message will give you hints about its use.</p></li>
+<li><p>Click on the Terminal print text block to place it in the Editor pane.</p></li>
+</ul>
+</li>
+<li><p>From the port dropdown menu, select the COM port connected to your Propeller board.</p></li>
+<li><p>Click the arrow button to run the project once. (It won’t be saved to the memory on your Propeller board.)</p>
+<ul class="simple">
+<li><p>A terminal should open up, showing the “Hello!” message.</p></li>
+</ul>
+<p>If you instead get an error message like the one below:</p>
+<ul class="simple">
+<li><p>Check to make sure your USB cable is connected to both the board and the computer.</p></li>
+<li><p>If you are using the Propeller Activity Board WX, make sure its Power switch is in position 1 or 2.</p></li>
+<li><p>Check the port number in the error message. Then, check the port options in the BlocklyProp dropdown. If there is another port listed there, try it instead.</p></li>
+</ul>
+</li>
+<li><p>Back in the Edit pane, click inside the Terminal print text block and change the Hello message to something else. Also, check the new line box at the end of the block.</p></li>
+<li><p>Click the Load RAM arrow button again to see your new message displayed.</p></li>
+</ol>
+</section>
+</section>
+<section id="saving-projects">
+<h2>Saving Projects<a class="headerlink" href="#saving-projects" title="Permalink to this heading">#</a></h2>
+<p>There are two basic places where you can save the BlocklyProp projects you create: on your computer, and on your Propeller board’s EEPROM memory. Let’s look at the latter first.</p>
+<section id="saving-to-the-propeller-board-eeprom">
+<h3>Saving to the Propeller Board EEPROM<a class="headerlink" href="#saving-to-the-propeller-board-eeprom" title="Permalink to this heading">#</a></h3>
+<p>When you used the green arrow to run your project, you were loading into RAM. You may have seen the flyover text when you clicked the button (left), or you may have noticed the Load Into RAM popup before the Terminal (right).</p>
+<p>RAM, or Random Access Memory, is volatile, meaning it does not retain data if power is interrupted. If you run a project in RAM and then turn your board off and on again, the project will not run again because it is erased from the Propeller microcontroller’s RAM.</p>
+<p>The Propeller Activity Board WX, Propeller FLiP, and similar development boards have an EEPROM chip connected to the Propeller microcontroller. EEPROM, or Electrically Erasable Read Only Memory, is non-volatile. When you load a project into EEPROM, it stays there even if the power is cycled, until you write over it with new data. Let’s try it.</p>
+<ol class="arabic simple">
+<li><p>Make sure your Propeller board is still connected to your computer, with the power switch on if it has one.</p></li>
+<li><p>Run your Terminal print text project again by clicking the Load and run button.</p></li>
+<li><p>Notice the message now says Load into EEPROM briefly before the terminal opens.</p></li>
+<li><p>Press the Reset button on your Propeller board (above the switch on the Propeller Activity Board, or on the edge opposite the USB connector on the FLiP). This interrupts power and resets the Propeller microcontroller.</p></li>
+<li><p>Each time you press the button, the message will reprint in the Terminal.</p></li>
+</ol>
+</section>
+<section id="saving-to-the-computer">
+<h3>Saving to the Computer<a class="headerlink" href="#saving-to-the-computer" title="Permalink to this heading">#</a></h3>
+<p>It is good practice to save your BlocklyProp projects to your computer frequently while you work. In fact, a message will pop up every 20 minutes to remind you. Once you load a project to your Propeller board EEPROM, you cannot get the project out and back into BlocklyProp.</p>
+<ol class="arabic simple">
+<li><p>Click the <strong>Save</strong> button.</p></li>
+<li><p>Use the Save As dialog to choose a file storage folder, and to rename your project if you like. BlocklyProp Solo saves projects as a specialized .svg file type.</p></li>
+<li><p>If your browser is set to automatically download to a default location, the file will be stored there. If there is already a file by that name, it will append a number to the end, such as Hello (1).svg.</p></li>
+<li><p>To use a saved file, just click the <strong>Open</strong> button and browse to the file.</p></li>
+</ol>
+<p>For the complete tutorial, including instructions on saving projects and troubleshooting, please visit the <a class="reference external" href="https://learn.parallax.com/tutorials/language/blocklyprop/getting-started-blocklyprop-solo">source URL</a>.</p>
+<p><strong>Links</strong>:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://www.parallax.com/product/32600">ActivityBot 360°</a></p></li>
+<li><p><a class="reference external" href="https://www.parallax.com/product/32912">Propeller Activity Board WX</a></p></li>
+<li><p><a class="reference external" href="https://www.parallax.com/product/32123">Propeller FLiP Module</a></p></li>
+<li><p><a class="reference external" href="https://www.parallax.com/package/blocklyprop-solo-launcher-and-faq-for-schools-downloads/">BlocklyProp Launcher</a></p></li>
+<li><p><a class="reference external" href="https://solo.parallax.com">BlocklyProp Solo</a></p></li>
+<li><p><a class="reference external" href="https://learn.parallax.com/tutorials/language/blocklyprop/getting-started-blocklyprop-solo/connect-and-program">Connect and Program</a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./learning-modules/lab1"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-it-s-about">What it’s about</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#what-you-need-to-get-started">What you need to get started</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#blocklyprop-launcher">BlocklyProp Launcher</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#installing-the-launcher-ahead-of-time">Installing the Launcher Ahead of Time</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#opening-blocklyprop-solo">Opening BlocklyProp Solo</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#connect-your-hardware">Connect your Hardware</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-project">Create a Project</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-projects">Saving Projects</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-to-the-propeller-board-eeprom">Saving to the Propeller Board EEPROM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#saving-to-the-computer">Saving to the Computer</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By University of California, Davis
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
