@@ -3,7 +3,7 @@
 
 title: AgTech, IoT
 author: University of California, Davis
-logo: logo.jpeg
+logo: images/book/other/logo.jpeg
 
 # Force re-execution of notebooks on each build.
 # See https://jupyterbook.org/content/execute.html

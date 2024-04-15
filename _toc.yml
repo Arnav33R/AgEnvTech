@@ -2,20 +2,19 @@
 # Learn more at https://jupyterbook.org/customize/toc.html
 
 format: jb-book
-root: intro
+root: intro.md
 chapters:
-  - file: hardware
+  - file: hardware/hardware.md
     sections:
       - title: Overview of Parallax Propeller Board
-        file: board1.md
+        file: hardware/board1.md
       - title: Detailed breakdown of Parallax Propeller Board
-        file: board2.md
+        file: hardware/board2.md
       - title: Our Custom Board
-        file: board3.md
-  #- file: programming
-  - file: learning-modules
+        file: hardware/board3.md
+  - file: learning-modules/learning-modules.md
     sections:
       - title: Lab 1
-        file: module1.md
+        file: learning-modules/module1.md
       - title: Lab 2
-        file: module2.md
+        file: learning-modules/module2.md
