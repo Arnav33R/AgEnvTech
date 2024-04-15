@@ -15,6 +15,8 @@ chapters:
   - file: learning-modules/learning-modules.md
     sections:
       - title: Lab 1
-        file: learning-modules/module1.md
+        file: learning-modules/lab1/module1.md
       - title: Lab 2
-        file: learning-modules/module2.md
+        file: learning-modules/lab2/module2.md
+      - title: Lab 3
+        file: learning-modules/lab3/module3.md

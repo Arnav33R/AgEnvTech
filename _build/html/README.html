@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>AgTech &#8212; AgTech, IoT</title>
+    <title>AgEnvTech at UC Davis &#8212; AgTech, IoT</title>
   
   
   
@@ -173,7 +173,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="hardware/board3.html">Our Custom Board</a></li>
 </ul>
 </li>
-<li class="toctree-l1 has-children"><a class="reference internal" href="learning-modules/learning-modules.html">Learning Modules</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="simple">
+<li class="toctree-l1 has-children"><a class="reference internal" href="learning-modules/learning-modules.html">Learning Modules</a><input class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="learning-modules/lab1/module1.html">Lab 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning-modules/lab2/module2.html">Lab 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="learning-modules/lab3/module3.html">Lab 3</a></li>
 </ul>
 </li>
 </ul>
@@ -346,7 +349,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -357,11 +362,28 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>AgTech</h1>
+    <h1>AgEnvTech at UC Davis</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cloning-a-repository-editing-files-and-pushing-changes">Cloning a Repository, Editing Files, and Pushing Changes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-clone-the-repository">Step 1: Clone the Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-navigate-to-the-repository-directory">Step 2: Navigate to the Repository Directory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-edit-files-and-building-jupyter-book">Step 3: Edit Files and Building Jupyter Book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-changes-to-the-repository">Making Changes to the Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-changes-to-the-website">Publishing Changes to the Website</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-and-remarks">Conclusion and Remarks</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -371,8 +393,85 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="agtech">
-<h1>AgTech<a class="headerlink" href="#agtech" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="agenvtech-at-uc-davis">
+<h1>AgEnvTech at UC Davis<a class="headerlink" href="#agenvtech-at-uc-davis" title="Permalink to this heading">#</a></h1>
+<p>Exploring the intersection of technology and agriculture</p>
+<p>Welcome to AgEnvTech at UC Davis, where we delve into the exciting world where agriculture meets technology. This website contains information about the TAE 30 class offered at UC Davis, titled “Mobile Communication &amp; Computing Technologies for Agriculture &amp; the Environment”</p>
+<section id="cloning-a-repository-editing-files-and-pushing-changes">
+<h2>Cloning a Repository, Editing Files, and Pushing Changes<a class="headerlink" href="#cloning-a-repository-editing-files-and-pushing-changes" title="Permalink to this heading">#</a></h2>
+<p>In this tutorial, we’ll cover the basic steps for cloning this repository, editing files within it, and then pushing those changes back to the repository and publishing to the website. This project makes use of Jupyter Books, more information about which can be found <a class="reference external" href="https://jupyterbook.org/">here</a></p>
+<section id="prerequisites">
+<h3>Prerequisites<a class="headerlink" href="#prerequisites" title="Permalink to this heading">#</a></h3>
+<p>Before we begin, ensure you have the following:</p>
+<ul class="simple">
+<li><p>Git installed on your system.</p></li>
+<li><p>Access to a GitHub account (or any other Git hosting service).</p></li>
+</ul>
+</section>
+<section id="step-1-clone-the-repository">
+<h3>Step 1: Clone the Repository<a class="headerlink" href="#step-1-clone-the-repository" title="Permalink to this heading">#</a></h3>
+<p>To clone a repository, open your terminal or command prompt and navigate to the directory where you want to clone the repository. Then, use the <code class="docutils literal notranslate"><span class="pre">git</span> <span class="pre">clone</span></code> command followed by the repository URL. You can find the repository URL as shown in the image below:</p>
+<p>Make sure to do this in the directory you want the repository to reside in. Replace &lt;repository_url&gt; with the actual URL of the repository you want to clone.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone &lt;repository_url&gt;
+</pre></div>
+</div>
+</section>
+<section id="step-2-navigate-to-the-repository-directory">
+<h3>Step 2: Navigate to the Repository Directory<a class="headerlink" href="#step-2-navigate-to-the-repository-directory" title="Permalink to this heading">#</a></h3>
+<p>Once the repository is cloned, navigate into the directory by using the <code class="docutils literal notranslate"><span class="pre">cd</span></code> command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">cd</span> &lt;repository_name&gt;
+</pre></div>
+</div>
+<p>This repository name is the same as the one shown on GitHub.</p>
+</section>
+<section id="step-3-edit-files-and-building-jupyter-book">
+<h3>Step 3: Edit Files and Building Jupyter Book<a class="headerlink" href="#step-3-edit-files-and-building-jupyter-book" title="Permalink to this heading">#</a></h3>
+<p>Now that you’re inside the repository directory, you can edit files using any text editor or IDE of your choice. For Jupyter Books, you’ll primarily work with Markdown files (.md) and Jupyter Notebooks (.ipynb). You can open the directory using, say, VSCode.</p>
+<p>After you’ve edited the files, on command line, run the following command from the parent directory of the repository. For example, if my repository path is <code class="docutils literal notranslate"><span class="pre">\Downloads/AgEnvTech</span></code>, I would run this command in the <code class="docutils literal notranslate"><span class="pre">\Downloads\</span></code> directory:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>jupyter-book build &lt;repository_name&gt;/
+</pre></div>
+</div>
+<p>This would build the Jupyter Book, allowing you to view the contents. Typically, in the command line, it will give you the file path to enter in your browser to direct you to the website. You can paste this directly into the browser.</p>
+</section>
+<section id="making-changes-to-the-repository">
+<h3>Making Changes to the Repository<a class="headerlink" href="#making-changes-to-the-repository" title="Permalink to this heading">#</a></h3>
+<p>Once you are ready to push changes to the repository, make sure to run the following commands from the repository directory on your command line:</p>
+<p>First, make sure you are in sync with the repository. It is best practice to regularly pull from the repository. Before making any pushes, make sure to run this command</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git pull
+</pre></div>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git add *
+</pre></div>
+</div>
+<p>This command adds all modified files to the staging area. If you want to add specific files, replace <code class="docutils literal notranslate"><span class="pre">*</span></code> with the file names.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git commit -m &lt;your_commit_message&gt;
+</pre></div>
+</div>
+<p>Replace &lt;your_commit_message&gt; with a descriptive message for your changes.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push
+</pre></div>
+</div>
+<p>Finally, push your changes back to the repository using the git push command.</p>
+<p>If it’s your first time pushing to the repository, you may need to set the upstream branch using the following command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git push -u origin master
+</pre></div>
+</div>
+<p>Replace <code class="docutils literal notranslate"><span class="pre">master</span></code> with the branch name if you’re working on a different branch.</p>
+</section>
+<section id="publishing-changes-to-the-website">
+<h3>Publishing Changes to the Website<a class="headerlink" href="#publishing-changes-to-the-website" title="Permalink to this heading">#</a></h3>
+<p>Once you have pushed all your local changes to the repository, you can run this command on your command line for the Jupyter Book build that will rebuild and republish the website hosted by GitHub Pages:</p>
+<p>Make sure to run this from within the repository directory</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>ghp-import -n -p -f _build/html
+</pre></div>
+</div>
+</section>
+<section id="conclusion-and-remarks">
+<h3>Conclusion and Remarks<a class="headerlink" href="#conclusion-and-remarks" title="Permalink to this heading">#</a></h3>
+<p>Thanks! More help with GitHub development can be found <a class="reference external" href="https://github.com/git-guides">here</a> and help with Jupyter Book development can be found <a class="reference external" href="https://jupyterbook.org/en/stable/intro.html">here</a>.</p>
+<p>This website was developed by Arnav Rastogi, an undergraduate student at UC Davis, with supervision from Dr. Ali Moghimi.</p>
+</section>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -411,6 +510,29 @@ document.write(`
             </div>
             
             
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cloning-a-repository-editing-files-and-pushing-changes">Cloning a Repository, Editing Files, and Pushing Changes</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#prerequisites">Prerequisites</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-1-clone-the-repository">Step 1: Clone the Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-2-navigate-to-the-repository-directory">Step 2: Navigate to the Repository Directory</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#step-3-edit-files-and-building-jupyter-book">Step 3: Edit Files and Building Jupyter Book</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#making-changes-to-the-repository">Making Changes to the Repository</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#publishing-changes-to-the-website">Publishing Changes to the Website</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion-and-remarks">Conclusion and Remarks</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>
