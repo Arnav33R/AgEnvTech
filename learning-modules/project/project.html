@@ -461,38 +461,23 @@ This project provides the opportunity to integrate several assignments we have b
 </tr>
 </thead>
 <tbody>
+<tr class="row-even"><td><p>Condition</p></td>
+<td><p>Action</p></td>
+</tr>
+<tr class="row-odd"><td><p>—————————————————-</p></td>
+<td><p>————————————————————————————————-</p></td>
+</tr>
 <tr class="row-even"><td><p>Temperature &gt; threshold defined by users</p></td>
-<td><p>Turn on the LED connected to pin 26, assuming we are</p></td>
+<td><p>Turn on the LED connected to pin 26, assuming we are turning a fan ON. Otherwise, turn off the LED light.</p></td>
 </tr>
-<tr class="row-odd"><td><p>turning a fan ON. Otherwise, turn off the LED light.</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p>Relative humidity &gt; threshold defined by users</p></td>
+<td><p>Rotate the servo motor 90 degrees, assuming the motor is opening a window in a greenhouse. Otherwise, set the angle to 0 degrees (closing the gate).</p></td>
 </tr>
-<tr class="row-even"><td><p>Relative humidity &gt; threshold defined by users</p></td>
-<td><p>Rotate the servo motor 90 degrees, assuming the motor is</p></td>
+<tr class="row-even"><td><p>Soil moisture &lt; threshold defined by users</p></td>
+<td><p>Turn on the pump until the soil moisture returns to the desired level. The pump is connected to “relay 1”. Otherwise, turn off the pump.</p></td>
 </tr>
-<tr class="row-odd"><td><p>opening a window in a greenhouse. Otherwise, set the</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>angle to 0 degrees (closing the gate).</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>Soil moisture &lt; threshold defined by users</p></td>
-<td><p>Turn on the pump until the soil moisture returns to the</p></td>
-</tr>
-<tr class="row-even"><td><p>desired level. The pump is connected to “relay 1”.</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-odd"><td><p>Otherwise, turn off the pump.</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>PAR &lt; threshold defined by users</p></td>
-<td><p>Turn on the pump until the soil moisture returns to the</p></td>
-</tr>
-<tr class="row-odd"><td><p>desired level. The pump is connected to “relay 1”.</p></td>
-<td><p></p></td>
-</tr>
-<tr class="row-even"><td><p>Otherwise, turn off the pump.</p></td>
-<td><p></p></td>
+<tr class="row-odd"><td><p>PAR &lt; threshold defined by users</p></td>
+<td><p>Turn on the pump until the soil moisture returns to the desired level. The pump is connected to “relay 1”. Otherwise, turn off the pump.</p></td>
 </tr>
 </tbody>
 </table>
