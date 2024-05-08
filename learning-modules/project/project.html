@@ -1,0 +1,652 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+    <title>Smart pot: a small-scale controlled environment for plants &#8212; AgTech, IoT</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/bootstrap.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+<link href="../../_static/styles/pydata-sphinx-theme.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+
+  
+  <link href="../../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=365ca57ee442770a23c6" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" href="../../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6" />
+<link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6" />
+  <script src="../../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=365ca57ee442770a23c6"></script>
+
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+    <script src="../../_static/jquery.js"></script>
+    <script src="../../_static/underscore.js"></script>
+    <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../../_static/doctools.js"></script>
+    <script src="../../_static/clipboard.min.js"></script>
+    <script src="../../_static/copybutton.js"></script>
+    <script src="../../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
+const thebe_selector = ".thebe,.cell"
+const thebe_selector_input = "pre"
+const thebe_selector_output = ".output, .cell_output"
+</script>
+    <script async="async" src="../../_static/sphinx-thebe.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'learning-modules/project/project';</script>
+    <link rel="index" title="Index" href="../../genindex.html" />
+    <link rel="search" title="Search" href="../../search.html" />
+    <link rel="prev" title="TAE 30 Blockly Programming" href="../lab3/module3.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+  
+    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
+    </nav>
+  
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+  
+
+<a class="navbar-brand logo" href="../../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../../_static/logo.jpeg" class="logo__image only-light" alt="AgTech, IoT - Home"/>
+    <script>document.write(`<img src="../../_static/logo.jpeg" class="logo__image only-dark" alt="AgTech, IoT - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../../intro.html">
+                    AgEnvTech: TAE 30
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="../../hardware/hardware.html">Hardware</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-1"><i class="fa-solid fa-chevron-down"></i></label><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../hardware/board1.html">Parallax Propellor Board</a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="../../hardware/board2.html">Detailed breakdown of Parallax Propeller Board</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../hardware/board3.html">Our Custom Board</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="../learning-modules.html">Learning Modules</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-2" name="toctree-checkbox-2" type="checkbox"/><label class="toctree-toggle" for="toctree-checkbox-2"><i class="fa-solid fa-chevron-down"></i></label><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../lab1/module1.html">Lab 1</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lab2/module2.html">Lab 2</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lab3/module3.html">Lab 3</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Project</a></li>
+</ul>
+</li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/Arnav33R/AgEnvTech" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/Arnav33R/AgEnvTech/issues/new?title=Issue%20on%20page%20%2Flearning-modules/project/project.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../../_sources/learning-modules/project/project.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Smart pot: a small-scale controlled environment for plants</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project">Project</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code-includes-a-main-block-and-eight-function-blocks-as-follows">The code includes a main block and eight function blocks as follows:</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article" role="main">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="smart-pot-a-small-scale-controlled-environment-for-plants">
+<h1><strong>Smart pot: a small-scale controlled environment for plants</strong><a class="headerlink" href="#smart-pot-a-small-scale-controlled-environment-for-plants" title="Permalink to this heading">#</a></h1>
+<p><strong>Due: Jun 7, 11:59 PM</strong></p>
+<section id="project">
+<h2>Project<a class="headerlink" href="#project" title="Permalink to this heading">#</a></h2>
+<h2 style="background-color: #008080; color: white;">Learning Goals</h2>
+<p>The overall objective of this project is to develop a smart pot as a small-scale controlled environment system for a plant to detect various environmental factors and make decisions to achieve the desired environment for the plant to grow. The IoT system includes multiple sensors and actuators that will interact with the plant. The sensing part comprises temperature and relative humidity, PAR, and soil moisture sensors. The actuators are a servo motor, an irrigation pump, an LED, and a lamp. The learning goal is to learn and practice:</p>
+<ul>
+    <li>Creating scripts and functions in Blockly</li>
+    <li>How to read data from multiple sensors</li>
+    <li>How to make decisions based on sensors’ data and user-defined values (set points)</li>
+    <li>How to activate and control multiple actuators</li>
+</ul>
+<h2 style="background-color: #008080; color: white;">Software and Hardware</h2>
+<ul>
+    <li>BlocklyProp Solo</li>
+    <li>Activity Board and Parallax USB programming cable</li>
+    <li>PAR sensor</li>
+    <li>Temperature/RH sensor</li>
+    <li>Soil moisture sensor</li>
+    <li>Servo motor</li>
+    <li>Pump (peristaltic pump)</li>
+    <li>Outlet Power Relay Module</li>
+</ul>
+<h2 style="background-color: #008080; color: white;">Project Description</h2>
+This project provides the opportunity to integrate several assignments we have been working on during the quarter. To control and achieve the desired growth environment for plants, we need to develop a program that prompts users to enter the desired values (set points or thresholds) for each parameter we will control. Additionally, it should constantly read the sensor data. Then, it should activate the actuators based on the input data from the users and sensors (Figure 1).
+<p><img alt="Flowchart" src="../../_images/project_flow.png" /></p>
+<h2 style="background-color: #008080; color: white;">Programming</h2>
+<section id="the-code-includes-a-main-block-and-eight-function-blocks-as-follows">
+<h3>The code includes a main block and eight function blocks as follows:<a class="headerlink" href="#the-code-includes-a-main-block-and-eight-function-blocks-as-follows" title="Permalink to this heading">#</a></h3>
+<p><strong>Main block</strong></p>
+<ul class="simple">
+<li><p>Define a variable called “iteration” and set it to 1.</p></li>
+<li><p>Get set points from users and save them as variables</p>
+<ul>
+<li><p>Temperature set point (threshold) saved as “temp_threshold”</p></li>
+<li><p>Relative humidity set point saved as “rh_threshold”</p></li>
+<li><p>PAR set point saved as “par_threshold”</p></li>
+<li><p>Soil moisture set point saved as “moisture_threshold”</p></li>
+</ul>
+</li>
+<li><p>A forever repeat block</p>
+<ul>
+<li><p>Print the iteration variable to show how many measurements we have done so far.</p></li>
+<li><p>Call functions</p>
+<ul>
+<li><p><em>temp_sensor</em> function to read the temperature value</p></li>
+<li><p><em>rh_sensor</em> function to read the RH value</p></li>
+<li><p><em>par_sensor</em> function to read the intensity of ambient light</p></li>
+<li><p><em>moisture_sensor</em> function to read the soil moisture</p></li>
+<li><p><em>led_light</em> function to turn on LED 26 based on temperature</p></li>
+<li><p><em>servo_motor</em> function to rotate servo motor based on RH</p></li>
+<li><p><em>light_source</em> function to turn the light source ON and OFF based on PAR</p></li>
+<li><p><em>irrigation_pump</em> function to turn the pump ON and OFF based on soil moisture</p></li>
+</ul>
+</li>
+<li><p>Pause 3000 ms</p></li>
+<li><p>Increment iteration variable</p></li>
+<li><p>Clear the terminal</p></li>
+</ul>
+</li>
+<li><p>Save your code on your computer periodically.</p></li>
+<li><p>Submit your code saved as <code class="docutils literal notranslate"><span class="pre">project_firstName_lastName.svg</span></code> file (e.g, <code class="docutils literal notranslate"><span class="pre">project_ali_moghimi.svg</span></code>)</p></li>
+</ul>
+<p><strong>Table 1</strong> shows what actions we should take based on the inputs from the users and sensors, and <strong>Table 2</strong> presents the pin number associated with each sensor and actuator.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Condition</p></th>
+<th class="head"><p>Action</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Temperature &gt; threshold defined by users</p></td>
+<td><p>Turn on the LED connected to pin 26, assuming we are</p></td>
+</tr>
+<tr class="row-odd"><td><p>turning a fan ON. Otherwise, turn off the LED light.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Relative humidity &gt; threshold defined by users</p></td>
+<td><p>Rotate the servo motor 90 degrees, assuming the motor is</p></td>
+</tr>
+<tr class="row-odd"><td><p>opening a window in a greenhouse. Otherwise, set the</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>angle to 0 degrees (closing the gate).</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Soil moisture &lt; threshold defined by users</p></td>
+<td><p>Turn on the pump until the soil moisture returns to the</p></td>
+</tr>
+<tr class="row-even"><td><p>desired level. The pump is connected to “relay 1”.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-odd"><td><p>Otherwise, turn off the pump.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>PAR &lt; threshold defined by users</p></td>
+<td><p>Turn on the pump until the soil moisture returns to the</p></td>
+</tr>
+<tr class="row-odd"><td><p>desired level. The pump is connected to “relay 1”.</p></td>
+<td><p></p></td>
+</tr>
+<tr class="row-even"><td><p>Otherwise, turn off the pump.</p></td>
+<td><p></p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Table 1</strong>. Taking appropriate actions based on the inputs from users and sensors.</p>
+<p><strong>Table 2</strong>. Pin number associated with each sensor and actuator.</p>
+<table class="table">
+<thead>
+<tr class="row-odd"><th class="head"><p>Sensor/actuator</p></th>
+<th class="head"><p>Pin</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>Temp/RH sensor</p></td>
+<td><p>Pin 14</p></td>
+</tr>
+<tr class="row-odd"><td><p>Soil moisture sensor  connected to the general socket</p></td>
+<td><p>Pin AD2 (analog to digital 2)</p></td>
+</tr>
+<tr class="row-even"><td><p>PAR sensor</p></td>
+<td><p>Pin AD3 (analog to digital 3)</p></td>
+</tr>
+<tr class="row-odd"><td><p>Servo motor</p></td>
+<td><p>Pin 16 and 17, as we did for lab 7</p></td>
+</tr>
+<tr class="row-even"><td><p>The pump is plugged into the relay module that is connected to the “relay 1” socket</p></td>
+<td><p>Pin 13</p></td>
+</tr>
+<tr class="row-odd"><td><p>The light source is plugged into the relay module that is connected to “relay 2” socket</p></td>
+<td><p>Pin 12</p></td>
+</tr>
+</tbody>
+</table>
+<p><strong>What to submit:</strong></p>
+<ul class="simple">
+<li><p>Submit your code saved as a *.svg file.</p></li>
+<li><p>A photo of your system.</p></li>
+<li><p>A short video of your system while working (OPTIONAL).</p></li>
+<li><p>The project is worth 20% of the total course grade.</p></li>
+<li><p>We will test your code together in our lab session on June 5th. If we find a bug, you will have two days to debug and submit it again by June 9th with up to a 20% point deduction.</p></li>
+<li><p>You need to return all the equipment you borrowed by June 10.</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./learning-modules/project"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  <!-- Previous / next buttons -->
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../lab3/module3.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">TAE 30 Blockly Programming</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project">Project</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code-includes-a-main-block-and-eight-function-blocks-as-follows">The code includes a main block and eight function blocks as follows:</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By University of California, Davis
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  <p class="copyright">
+    
+      © Copyright 2022.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/bootstrap.js?digest=365ca57ee442770a23c6"></script>
+<script src="../../_static/scripts/pydata-sphinx-theme.js?digest=365ca57ee442770a23c6"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
