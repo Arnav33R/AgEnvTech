@@ -20,3 +20,5 @@ chapters:
         file: learning-modules/lab2/module2.md
       - title: Lab 3
         file: learning-modules/lab3/module3.md
+      - title: Project
+        file: learning-modules/project/project.md
