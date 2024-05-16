@@ -41,7 +41,7 @@ Now that you're inside the repository directory, you can edit files using any te
 After you've edited the files, on command line, run the following command from the parent directory of the repository. For example, if my repository path is `\Downloads/AgEnvTech`, I would run this command in the `\Downloads\` directory:
 
 ```bash
-jupyter-book build <repository_name>/
+jupyter-book build AgEnvTech/
 ```
 This would build the Jupyter Book, allowing you to view the contents. Typically, in the command line, it will give you the file path to enter in your browser to direct you to the website. You can paste this directly into the browser. 
 
