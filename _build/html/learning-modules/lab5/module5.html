@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Smart pot: a small-scale controlled environment for plants &#8212; AgTech, IoT</title>
+    <title>Class Activity &#8212; AgTech, IoT</title>
   
   
   
@@ -62,10 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'learning-modules/project/project';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'learning-modules/lab5/module5';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
-    <link rel="prev" title="TAE 30 Blockly Programming" href="../lab3/module3.html" />
+    <link rel="next" title="Smart pot: a small-scale controlled environment for plants" href="../project/project.html" />
+    <link rel="prev" title="Measuring Temperature and Relative Humidity" href="../lab4/module4.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -178,7 +179,9 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../lab1/module1.html">Lab 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lab2/module2.html">Lab 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lab3/module3.html">Lab 3</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Project</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../lab4/module4.html">Lab 4</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Lab 5 Class Activity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project/project.html">Project</a></li>
 </ul>
 </li>
 </ul>
@@ -252,7 +255,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/Arnav33R/AgEnvTech/issues/new?title=Issue%20on%20page%20%2Flearning-modules/project/project.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Arnav33R/AgEnvTech/issues/new?title=Issue%20on%20page%20%2Flearning-modules/lab5/module5.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -282,7 +285,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/learning-modules/project/project.md" target="_blank"
+      <li><a href="../../_sources/learning-modules/lab5/module5.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -364,7 +367,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Smart pot: a small-scale controlled environment for plants</h1>
+    <h1>Class Activity</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -374,10 +377,9 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project">Project</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code-includes-a-main-block-and-eight-function-blocks-as-follows">The code includes a main block and eight function blocks as follows:</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-script-that">Create a Script That:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-instructions">Additional Instructions:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-code-to-play-music">Sample Code to Play Music</a></li>
 </ul>
             </nav>
         </div>
@@ -389,137 +391,65 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="smart-pot-a-small-scale-controlled-environment-for-plants">
-<h1><strong>Smart pot: a small-scale controlled environment for plants</strong><a class="headerlink" href="#smart-pot-a-small-scale-controlled-environment-for-plants" title="Permalink to this heading">#</a></h1>
-<p><strong>Due: Jun 7, 11:59 PM</strong></p>
-<section id="project">
-<h2>Project<a class="headerlink" href="#project" title="Permalink to this heading">#</a></h2>
-<h2 style="background-color: #008080; color: white;">Learning Goals</h2>
-<p>The overall objective of this project is to develop a smart pot as a small-scale controlled environment system for a plant to detect various environmental factors and make decisions to achieve the desired environment for the plant to grow. The IoT system includes multiple sensors and actuators that will interact with the plant. The sensing part comprises temperature and relative humidity, PAR, and soil moisture sensors. The actuators are a servo motor, an irrigation pump, an LED, and a lamp. The learning goal is to learn and practice:</p>
-<ul>
-    <li>Creating scripts and functions in Blockly</li>
-    <li>How to read data from multiple sensors</li>
-    <li>How to make decisions based on sensors’ data and user-defined values (set points)</li>
-    <li>How to activate and control multiple actuators</li>
-</ul>
-<h2 style="background-color: #008080; color: white;">Software and Hardware</h2>
-<ul>
-    <li>BlocklyProp Solo</li>
-    <li>Activity Board and Parallax USB programming cable</li>
-    <li>PAR sensor</li>
-    <li>Temperature/RH sensor</li>
-    <li>Soil moisture sensor</li>
-    <li>Servo motor</li>
-    <li>Pump (peristaltic pump)</li>
-    <li>Outlet Power Relay Module</li>
-</ul>
-<h2 style="background-color: #008080; color: white;">Project Description</h2>
-This project provides the opportunity to integrate several assignments we have been working on during the quarter. To control and achieve the desired growth environment for plants, we need to develop a program that prompts users to enter the desired values (set points or thresholds) for each parameter we will control. Additionally, it should constantly read the sensor data. Then, it should activate the actuators based on the input data from the users and sensors (Figure 1).
-<p><img alt="Flowchart" src="../../_images/project_flow.png" /></p>
-<h2 style="background-color: #008080; color: white;">Programming</h2>
-<section id="the-code-includes-a-main-block-and-eight-function-blocks-as-follows">
-<h3>The code includes a main block and eight function blocks as follows:<a class="headerlink" href="#the-code-includes-a-main-block-and-eight-function-blocks-as-follows" title="Permalink to this heading">#</a></h3>
-<p><strong>Main block</strong></p>
-<ul class="simple">
-<li><p>Define a variable called “iteration” and set it to 1.</p></li>
-<li><p>Get set points from users and save them as variables</p>
-<ul>
-<li><p>Temperature set point (threshold) saved as “temp_threshold”</p></li>
-<li><p>Relative humidity set point saved as “rh_threshold”</p></li>
-<li><p>PAR set point saved as “par_threshold”</p></li>
-<li><p>Soil moisture set point saved as “moisture_threshold”</p></li>
-</ul>
-</li>
-<li><p>A forever repeat block</p>
-<ul>
-<li><p>Print the iteration variable to show how many measurements we have done so far.</p></li>
-<li><p>Call functions</p>
-<ul>
-<li><p><em>temp_sensor</em> function to read the temperature value</p></li>
-<li><p><em>rh_sensor</em> function to read the RH value</p></li>
-<li><p><em>par_sensor</em> function to read the intensity of ambient light</p></li>
-<li><p><em>moisture_sensor</em> function to read the soil moisture</p></li>
-<li><p><em>led_light</em> function to turn on LED 26 based on temperature</p></li>
-<li><p><em>servo_motor</em> function to rotate servo motor based on RH</p></li>
-<li><p><em>light_source</em> function to turn the light source ON and OFF based on PAR</p></li>
-<li><p><em>irrigation_pump</em> function to turn the pump ON and OFF based on soil moisture</p></li>
-</ul>
-</li>
-<li><p>Pause 3000 ms</p></li>
-<li><p>Increment iteration variable</p></li>
-<li><p>Clear the terminal</p></li>
-</ul>
-</li>
-<li><p>Save your code on your computer periodically.</p></li>
-<li><p>Submit your code saved as <code class="docutils literal notranslate"><span class="pre">project_firstName_lastName.svg</span></code> file (e.g, <code class="docutils literal notranslate"><span class="pre">project_ali_moghimi.svg</span></code>)</p></li>
-</ul>
-<p><strong>Table 1</strong> shows what actions we should take based on the inputs from the users and sensors, and <strong>Table 2</strong> presents the pin number associated with each sensor and actuator.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="class-activity">
+<h1>Class Activity<a class="headerlink" href="#class-activity" title="Permalink to this heading">#</a></h1>
+<p><strong>Week 6</strong></p>
+<section id="create-a-script-that">
+<h2>Create a Script That:<a class="headerlink" href="#create-a-script-that" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple">
+<li><p>Reads laser ping sensor data in centimeters and assigns it to a variable (e.g., <code class="docutils literal notranslate"><span class="pre">distance</span></code>); please note the sensor is connected to pin 15.
+<img alt="Laser Ping" src="../../_images/lab5_pic1.png" /></p></li>
+<li><p>Prints distance in centimeters in the terminal with its unit (e.g., <code class="docutils literal notranslate"><span class="pre">distance:</span> <span class="pre">10</span> <span class="pre">cm</span></code>).</p></li>
+<li><p>Makes decisions based on the distance:</p></li>
+</ol>
 <table class="table">
 <thead>
-<tr class="row-odd"><th class="head"><p>Condition</p></th>
-<th class="head"><p>Action</p></th>
+<tr class="row-odd"><th class="head"><p>No.</p></th>
+<th class="head"><p>Conditions</p></th>
+<th class="head"><p>Do</p></th>
 </tr>
 </thead>
 <tbody>
-<tr class="row-even"><td><p>Condition</p></td>
-<td><p>Action</p></td>
+<tr class="row-even"><td><p>1</p></td>
+<td><p>If <code class="docutils literal notranslate"><span class="pre">distance</span> <span class="pre">≥</span> <span class="pre">50</span> <span class="pre">cm</span></code></p></td>
+<td><p>Nothing (speaker is OFF)</p></td>
 </tr>
-<tr class="row-odd"><td><p>—————————————————-</p></td>
-<td><p>————————————————————————————————-</p></td>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p>&amp; Print(<code class="docutils literal notranslate"><span class="pre">“distance</span> <span class="pre">&gt;</span> <span class="pre">50”</span></code>) in terminal</p></td>
 </tr>
-<tr class="row-even"><td><p>Temperature &gt; threshold defined by users</p></td>
-<td><p>Turn on the LED connected to pin 26, assuming we are turning a fan ON. Otherwise, turn off the LED light.</p></td>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>If <code class="docutils literal notranslate"><span class="pre">30</span> <span class="pre">≤</span> <span class="pre">distance</span> <span class="pre">&lt;</span> <span class="pre">50</span> <span class="pre">cm</span></code></p></td>
+<td><p>Play a sound (e.g., <code class="docutils literal notranslate"><span class="pre">techloop.wav</span></code>) with volume 7</p></td>
 </tr>
-<tr class="row-odd"><td><p>Relative humidity &gt; threshold defined by users</p></td>
-<td><p>Rotate the servo motor 90 degrees, assuming the motor is opening a window in a greenhouse. Otherwise, set the angle to 0 degrees (closing the gate).</p></td>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p>&amp; Print(<code class="docutils literal notranslate"><span class="pre">“30</span> <span class="pre">≤</span> <span class="pre">distance</span> <span class="pre">&lt;</span> <span class="pre">50”</span></code>) in terminal</p></td>
 </tr>
-<tr class="row-even"><td><p>Soil moisture &lt; threshold defined by users</p></td>
-<td><p>Turn on the pump until the soil moisture returns to the desired level. The pump is connected to “relay 1”. Otherwise, turn off the pump.</p></td>
+<tr class="row-even"><td><p>3</p></td>
+<td><p>If <code class="docutils literal notranslate"><span class="pre">distance</span> <span class="pre">&lt;</span> <span class="pre">30</span> <span class="pre">cm</span></code></p></td>
+<td><p>Play a sound (e.g., <code class="docutils literal notranslate"><span class="pre">techloop.wav</span></code>) with volume 10</p></td>
 </tr>
-<tr class="row-odd"><td><p>PAR &lt; threshold defined by users</p></td>
-<td><p>Turn on the pump until the soil moisture returns to the desired level. The pump is connected to “relay 1”. Otherwise, turn off the pump.</p></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Table 1</strong>. Taking appropriate actions based on the inputs from users and sensors.</p>
-<p><strong>Table 2</strong>. Pin number associated with each sensor and actuator.</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Sensor/actuator</p></th>
-<th class="head"><p>Pin</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Temp/RH sensor</p></td>
-<td><p>Pin 14</p></td>
-</tr>
-<tr class="row-odd"><td><p>Soil moisture sensor  connected to the general socket</p></td>
-<td><p>Pin AD2 (analog to digital 2)</p></td>
-</tr>
-<tr class="row-even"><td><p>PAR sensor</p></td>
-<td><p>Pin AD3 (analog to digital 3)</p></td>
-</tr>
-<tr class="row-odd"><td><p>Servo motor</p></td>
-<td><p>Pin 16 and 17, as we did for lab 7</p></td>
-</tr>
-<tr class="row-even"><td><p>The pump is plugged into the relay module that is connected to the “relay 1” socket</p></td>
-<td><p>Pin 13</p></td>
-</tr>
-<tr class="row-odd"><td><p>The light source is plugged into the relay module that is connected to “relay 2” socket</p></td>
-<td><p>Pin 12</p></td>
+<tr class="row-odd"><td><p></p></td>
+<td><p></p></td>
+<td><p>&amp; Print(<code class="docutils literal notranslate"><span class="pre">“distance</span> <span class="pre">&lt;</span> <span class="pre">30”</span></code>) in terminal</p></td>
 </tr>
 </tbody>
 </table>
-<p><strong>What to submit:</strong></p>
+</section>
+<section id="additional-instructions">
+<h2>Additional Instructions:<a class="headerlink" href="#additional-instructions" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Submit your code saved as a *.svg file.</p></li>
-<li><p>A photo of your system.</p></li>
-<li><p>A short video of your system while working (OPTIONAL).</p></li>
-<li><p>The project is worth 20% of the total course grade.</p></li>
-<li><p>We will test your code together in our lab session on June 5th. If we find a bug, you will have two days to debug and submit it again by June 9th with up to a 20% point deduction.</p></li>
-<li><p>You need to return all the equipment you borrowed by June 10.</p></li>
+<li><p>Download <code class="docutils literal notranslate"><span class="pre">techloop.wav</span></code> from Canvas, or you can download a sound from this library: <a class="reference external" href="https://learn.parallax.com/support/reference/sound-library">Sound Library</a></p></li>
+<li><p>Paste the music files (<code class="docutils literal notranslate"><span class="pre">.wav</span></code>) onto the SD card of the activity board.</p></li>
 </ul>
 </section>
+<section id="sample-code-to-play-music">
+<h2>Sample Code to Play Music<a class="headerlink" href="#sample-code-to-play-music" title="Permalink to this heading">#</a></h2>
+<p><img alt="Sample Code" src="../../_images/lab5_pic2.png" /></p>
+<ul class="simple">
+<li><p>Resource: <a class="reference external" href="https://learn.parallax.com/support/reference/sound-library">Play Music</a></p></li>
+</ul>
 </section>
 </section>
 
@@ -536,7 +466,7 @@ This project provides the opportunity to integrate several assignments we have b
         },
         kernelOptions: {
             name: "python3",
-            path: "./learning-modules/project"
+            path: "./learning-modules/lab5"
         },
         predefinedOutput: true
     }
@@ -554,13 +484,22 @@ This project provides the opportunity to integrate several assignments we have b
                   <!-- Previous / next buttons -->
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../lab3/module3.html"
+       href="../lab4/module4.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title">TAE 30 Blockly Programming</p>
+        <p class="prev-next-title">Measuring Temperature and Relative Humidity</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="../project/project.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Smart pot: a small-scale controlled environment for plants</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -577,10 +516,9 @@ This project provides the opportunity to integrate several assignments we have b
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project">Project</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code-includes-a-main-block-and-eight-function-blocks-as-follows">The code includes a main block and eight function blocks as follows:</a></li>
-</ul>
-</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#create-a-script-that">Create a Script That:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#additional-instructions">Additional Instructions:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-code-to-play-music">Sample Code to Play Music</a></li>
 </ul>
   </nav></div>
 

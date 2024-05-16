@@ -20,5 +20,9 @@ chapters:
         file: learning-modules/lab2/module2.md
       - title: Lab 3
         file: learning-modules/lab3/module3.md
+      - title: Lab 4
+        file: learning-modules/lab4/module4.md
+      - title: Lab 5 Class Activity
+        file: learning-modules/lab5/module5.md
       - title: Project
         file: learning-modules/project/project.md

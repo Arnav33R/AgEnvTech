@@ -65,17 +65,12 @@ This project provides the opportunity to integrate several assignments we have b
 
 | Condition | Action |
 |----------|----------|
-| Temperature > threshold defined by users    | Turn on the LED connected to pin 26, assuming we are
-turning a fan ON. Otherwise, turn off the LED light.    |
-| Relative humidity > threshold defined by users    | Rotate the servo motor 90 degrees, assuming the motor is
-opening a window in a greenhouse. Otherwise, set the
-angle to 0 degrees (closing the gate).    |
-| Soil moisture < threshold defined by users    | Turn on the pump until the soil moisture returns to the
-desired level. The pump is connected to “relay 1”.
-Otherwise, turn off the pump.    |
-| PAR < threshold defined by users    | Turn on the pump until the soil moisture returns to the
-desired level. The pump is connected to “relay 1”.
-Otherwise, turn off the pump.   |
+| Condition                                          | Action                                                                                          |
+|----------------------------------------------------|-------------------------------------------------------------------------------------------------|
+| Temperature > threshold defined by users            | Turn on the LED connected to pin 26, assuming we are turning a fan ON. Otherwise, turn off the LED light. |
+| Relative humidity > threshold defined by users       | Rotate the servo motor 90 degrees, assuming the motor is opening a window in a greenhouse. Otherwise, set the angle to 0 degrees (closing the gate). |
+| Soil moisture < threshold defined by users           | Turn on the pump until the soil moisture returns to the desired level. The pump is connected to “relay 1”. Otherwise, turn off the pump. |
+| PAR < threshold defined by users                     | Turn on the pump until the soil moisture returns to the desired level. The pump is connected to “relay 1”. Otherwise, turn off the pump. |
 
 **Table 1**. Taking appropriate actions based on the inputs from users and sensors.
 

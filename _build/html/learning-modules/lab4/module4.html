@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
-    <title>Smart pot: a small-scale controlled environment for plants &#8212; AgTech, IoT</title>
+    <title>Measuring Temperature and Relative Humidity &#8212; AgTech, IoT</title>
   
   
   
@@ -62,9 +62,10 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'learning-modules/project/project';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'learning-modules/lab4/module4';</script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
+    <link rel="next" title="Smart pot: a small-scale controlled environment for plants" href="../project/project.html" />
     <link rel="prev" title="TAE 30 Blockly Programming" href="../lab3/module3.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -178,7 +179,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l2"><a class="reference internal" href="../lab1/module1.html">Lab 1</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lab2/module2.html">Lab 2</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../lab3/module3.html">Lab 3</a></li>
-<li class="toctree-l2 current active"><a class="current reference internal" href="#">Project</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Lab 4</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../project/project.html">Project</a></li>
 </ul>
 </li>
 </ul>
@@ -252,7 +254,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://github.com/Arnav33R/AgEnvTech/issues/new?title=Issue%20on%20page%20%2Flearning-modules/project/project.html&body=Your%20issue%20content%20here." target="_blank"
+      <li><a href="https://github.com/Arnav33R/AgEnvTech/issues/new?title=Issue%20on%20page%20%2Flearning-modules/lab4/module4.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button dropdown-item"
    title="Open an issue"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -282,7 +284,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../../_sources/learning-modules/project/project.md" target="_blank"
+      <li><a href="../../_sources/learning-modules/lab4/module4.md" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -364,7 +366,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Smart pot: a small-scale controlled environment for plants</h1>
+    <h1>Measuring Temperature and Relative Humidity</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -374,8 +376,14 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project">Project</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code-includes-a-main-block-and-eight-function-blocks-as-follows">The code includes a main block and eight function blocks as follows:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-4">Lab 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-1">Programming 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-2">Programming 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-to-submit">What to Submit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instruction-and-hints-for-temperature-conversion">Instruction and hints for temperature conversion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hints">Hints:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instruction-and-hints-for-reading-sensor-data">Instruction and Hints for Reading Sensor Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-resources">Useful Resources</a></li>
 </ul>
 </li>
 </ul>
@@ -389,135 +397,182 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article" role="main">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="smart-pot-a-small-scale-controlled-environment-for-plants">
-<h1><strong>Smart pot: a small-scale controlled environment for plants</strong><a class="headerlink" href="#smart-pot-a-small-scale-controlled-environment-for-plants" title="Permalink to this heading">#</a></h1>
-<p><strong>Due: Jun 7, 11:59 PM</strong></p>
-<section id="project">
-<h2>Project<a class="headerlink" href="#project" title="Permalink to this heading">#</a></h2>
+  <section class="tex2jax_ignore mathjax_ignore" id="measuring-temperature-and-relative-humidity">
+<h1>Measuring Temperature and Relative Humidity<a class="headerlink" href="#measuring-temperature-and-relative-humidity" title="Permalink to this heading">#</a></h1>
+<p><strong>Due:</strong> April 30, 11:59 PM</p>
+<section id="lab-4">
+<h2>Lab 4<a class="headerlink" href="#lab-4" title="Permalink to this heading">#</a></h2>
 <h2 style="background-color: #008080; color: white;">Learning Goals</h2>
-<p>The overall objective of this project is to develop a smart pot as a small-scale controlled environment system for a plant to detect various environmental factors and make decisions to achieve the desired environment for the plant to grow. The IoT system includes multiple sensors and actuators that will interact with the plant. The sensing part comprises temperature and relative humidity, PAR, and soil moisture sensors. The actuators are a servo motor, an irrigation pump, an LED, and a lamp. The learning goal is to learn and practice:</p>
 <ul>
-    <li>Creating scripts and functions in Blockly</li>
-    <li>How to read data from multiple sensors</li>
-    <li>How to make decisions based on sensors’ data and user-defined values (set points)</li>
-    <li>How to activate and control multiple actuators</li>
+    <li>Create a simple script in Blockly</li>
+    <li>Learn and practice some of the programming basics:</li>
+    <ul>
+      <li>Measure temperature using temp/RH sensor</li>
+      <li>Measure relative humidity percentage using temp/RH sensor</li>
+    </ul>
 </ul>
 <h2 style="background-color: #008080; color: white;">Software and Hardware</h2>
 <ul>
     <li>BlocklyProp Solo</li>
-    <li>Activity Board and Parallax USB programming cable</li>
-    <li>PAR sensor</li>
-    <li>Temperature/RH sensor</li>
-    <li>Soil moisture sensor</li>
-    <li>Servo motor</li>
-    <li>Pump (peristaltic pump)</li>
-    <li>Outlet Power Relay Module</li>
+    <li>Activity Board</li>
+    <li>Parallax USB programming cable</li>
+    <li>Temperature & Humidity Sensor</li>
 </ul>
-<h2 style="background-color: #008080; color: white;">Project Description</h2>
-This project provides the opportunity to integrate several assignments we have been working on during the quarter. To control and achieve the desired growth environment for plants, we need to develop a program that prompts users to enter the desired values (set points or thresholds) for each parameter we will control. Additionally, it should constantly read the sensor data. Then, it should activate the actuators based on the input data from the users and sensors (Figure 1).
-<p><img alt="Flowchart" src="../../_images/project_flow.png" /></p>
-<h2 style="background-color: #008080; color: white;">Programming</h2>
-<section id="the-code-includes-a-main-block-and-eight-function-blocks-as-follows">
-<h3>The code includes a main block and eight function blocks as follows:<a class="headerlink" href="#the-code-includes-a-main-block-and-eight-function-blocks-as-follows" title="Permalink to this heading">#</a></h3>
-<p><strong>Main block</strong></p>
+<section id="programming-1">
+<h3>Programming 1<a class="headerlink" href="#programming-1" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Define a variable called “iteration” and set it to 1.</p></li>
-<li><p>Get set points from users and save them as variables</p>
-<ul>
-<li><p>Temperature set point (threshold) saved as “temp_threshold”</p></li>
-<li><p>Relative humidity set point saved as “rh_threshold”</p></li>
-<li><p>PAR set point saved as “par_threshold”</p></li>
-<li><p>Soil moisture set point saved as “moisture_threshold”</p></li>
-</ul>
-</li>
-<li><p>A forever repeat block</p>
-<ul>
-<li><p>Print the iteration variable to show how many measurements we have done so far.</p></li>
-<li><p>Call functions</p>
-<ul>
-<li><p><em>temp_sensor</em> function to read the temperature value</p></li>
-<li><p><em>rh_sensor</em> function to read the RH value</p></li>
-<li><p><em>par_sensor</em> function to read the intensity of ambient light</p></li>
-<li><p><em>moisture_sensor</em> function to read the soil moisture</p></li>
-<li><p><em>led_light</em> function to turn on LED 26 based on temperature</p></li>
-<li><p><em>servo_motor</em> function to rotate servo motor based on RH</p></li>
-<li><p><em>light_source</em> function to turn the light source ON and OFF based on PAR</p></li>
-<li><p><em>irrigation_pump</em> function to turn the pump ON and OFF based on soil moisture</p></li>
-</ul>
-</li>
-<li><p>Pause 3000 ms</p></li>
-<li><p>Increment iteration variable</p></li>
-<li><p>Clear the terminal</p></li>
-</ul>
+<li><p>Create a script that:</p>
+<ol class="arabic simple">
+<li><p>Gets a number from users. It is assumed the number is a temperature value, and</p></li>
+<li><p>Gets the unit of the temperature (either F or C; F for Fahrenheit and C for Celsius).</p></li>
+<li><p>Converts the temperature value to the other unit. For example, if users enter a temperature value in F, your code should convert it to Celsius and print it in the terminal.</p></li>
+</ol>
 </li>
 <li><p>Save your code on your computer periodically.</p></li>
-<li><p>Submit your code saved as <code class="docutils literal notranslate"><span class="pre">project_firstName_lastName.svg</span></code> file (e.g, <code class="docutils literal notranslate"><span class="pre">project_ali_moghimi.svg</span></code>)</p></li>
-</ul>
-<p><strong>Table 1</strong> shows what actions we should take based on the inputs from the users and sensors, and <strong>Table 2</strong> presents the pin number associated with each sensor and actuator.</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Condition</p></th>
-<th class="head"><p>Action</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Condition</p></td>
-<td><p>Action</p></td>
-</tr>
-<tr class="row-odd"><td><p>—————————————————-</p></td>
-<td><p>————————————————————————————————-</p></td>
-</tr>
-<tr class="row-even"><td><p>Temperature &gt; threshold defined by users</p></td>
-<td><p>Turn on the LED connected to pin 26, assuming we are turning a fan ON. Otherwise, turn off the LED light.</p></td>
-</tr>
-<tr class="row-odd"><td><p>Relative humidity &gt; threshold defined by users</p></td>
-<td><p>Rotate the servo motor 90 degrees, assuming the motor is opening a window in a greenhouse. Otherwise, set the angle to 0 degrees (closing the gate).</p></td>
-</tr>
-<tr class="row-even"><td><p>Soil moisture &lt; threshold defined by users</p></td>
-<td><p>Turn on the pump until the soil moisture returns to the desired level. The pump is connected to “relay 1”. Otherwise, turn off the pump.</p></td>
-</tr>
-<tr class="row-odd"><td><p>PAR &lt; threshold defined by users</p></td>
-<td><p>Turn on the pump until the soil moisture returns to the desired level. The pump is connected to “relay 1”. Otherwise, turn off the pump.</p></td>
-</tr>
-</tbody>
-</table>
-<p><strong>Table 1</strong>. Taking appropriate actions based on the inputs from users and sensors.</p>
-<p><strong>Table 2</strong>. Pin number associated with each sensor and actuator.</p>
-<table class="table">
-<thead>
-<tr class="row-odd"><th class="head"><p>Sensor/actuator</p></th>
-<th class="head"><p>Pin</p></th>
-</tr>
-</thead>
-<tbody>
-<tr class="row-even"><td><p>Temp/RH sensor</p></td>
-<td><p>Pin 14</p></td>
-</tr>
-<tr class="row-odd"><td><p>Soil moisture sensor  connected to the general socket</p></td>
-<td><p>Pin AD2 (analog to digital 2)</p></td>
-</tr>
-<tr class="row-even"><td><p>PAR sensor</p></td>
-<td><p>Pin AD3 (analog to digital 3)</p></td>
-</tr>
-<tr class="row-odd"><td><p>Servo motor</p></td>
-<td><p>Pin 16 and 17, as we did for lab 7</p></td>
-</tr>
-<tr class="row-even"><td><p>The pump is plugged into the relay module that is connected to the “relay 1” socket</p></td>
-<td><p>Pin 13</p></td>
-</tr>
-<tr class="row-odd"><td><p>The light source is plugged into the relay module that is connected to “relay 2” socket</p></td>
-<td><p>Pin 12</p></td>
-</tr>
-</tbody>
-</table>
-<p><strong>What to submit:</strong></p>
-<ul class="simple">
 <li><p>Submit your code saved as a *.svg file.</p></li>
-<li><p>A photo of your system.</p></li>
-<li><p>A short video of your system while working (OPTIONAL).</p></li>
-<li><p>The project is worth 20% of the total course grade.</p></li>
-<li><p>We will test your code together in our lab session on June 5th. If we find a bug, you will have two days to debug and submit it again by June 9th with up to a 20% point deduction.</p></li>
-<li><p>You need to return all the equipment you borrowed by June 10.</p></li>
+<li><p>Filename: <code class="docutils literal notranslate"><span class="pre">Lab4_YourInitials_DescriptiveName</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">Lab4_AM_temp_convertor</span></code>)</p></li>
+</ul>
+</section>
+<section id="programming-2">
+<h3>Programming 2<a class="headerlink" href="#programming-2" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>Create a script that:</p>
+<ol class="arabic">
+<li><p>Reads temperature sensor data in Fahrenheit and assigns it to a variable (e.g., <code class="docutils literal notranslate"><span class="pre">temp_F</span></code>); please note that the sensor is connected to <code class="docutils literal notranslate"><span class="pre">pin</span> <span class="pre">14</span></code>.</p></li>
+<li><p>Reads RH in percentage and assigns it to a variable (e.g., <code class="docutils literal notranslate"><span class="pre">rh</span></code>),</p></li>
+<li><p>Prints temperature in F and C in the terminal (you may use the code you wrote for the previous assignment). For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Temp</span><span class="p">:</span> <span class="mi">72</span> <span class="n">F</span>
+<span class="n">Temp</span><span class="p">:</span> <span class="mf">22.22</span> <span class="n">C</span>
+</pre></div>
+</div>
+</li>
+<li><p>Prints RH in the terminal with its unit (e.g., <code class="docutils literal notranslate"><span class="pre">RH</span> <span class="pre">=</span> <span class="pre">50</span> <span class="pre">%</span></code>).</p></li>
+<li><p>Makes decisions based on the temperature:</p>
+<ul class="simple">
+<li><p>If <code class="docutils literal notranslate"><span class="pre">temp_F</span> <span class="pre">&gt;</span> <span class="pre">70</span></code>:</p>
+<ul>
+<li><p>Print “Turn on AC”</p></li>
+<li><p>Turn on the built-in LED light connected to P26 and make it blink every 300 ms.</p></li>
+</ul>
+</li>
+<li><p>If <code class="docutils literal notranslate"><span class="pre">temp_F</span> <span class="pre">≤</span> <span class="pre">70</span></code>:</p>
+<ul>
+<li><p>Print “Turn on the heater”</p></li>
+<li><p>Turn on the built-in LED light connected to P27 and make it blink every 300 ms.</p></li>
+</ul>
+</li>
+<li><p>Please note that we selected this threshold to ensure that one of the conditions is always true. If it is, it will print something in the terminal, and one of the LEDs will turn on.</p></li>
+</ul>
+</li>
+</ol>
+</li>
+<li><p>Save your code on your computer periodically.</p></li>
+<li><p>Submit your code saved as a *.svg file.</p></li>
+<li><p>Filename: <code class="docutils literal notranslate"><span class="pre">Lab4_YourInitials_DescriptiveName</span></code> (e.g., <code class="docutils literal notranslate"><span class="pre">Lab4_AM_temp_rh_measurements</span></code>)</p></li>
+</ul>
+</section>
+<section id="what-to-submit">
+<h3>What to Submit<a class="headerlink" href="#what-to-submit" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Submit your codes saved as *.svg files.</p></li>
+</ul>
+</section>
+<section id="instruction-and-hints-for-temperature-conversion">
+<h3>Instruction and hints for temperature conversion<a class="headerlink" href="#instruction-and-hints-for-temperature-conversion" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>The script should have two main blocks:</p>
+<ul>
+<li><p><strong>Main block</strong>, in which there are:</p>
+<ul>
+<li><p>A continuous loop (use <code class="docutils literal notranslate"><span class="pre">repeat</span> <span class="pre">forever</span></code> block) asking users to enter:</p>
+<ul>
+<li><p>A number (use <code class="docutils literal notranslate"><span class="pre">terminal</span> <span class="pre">receive</span></code> block) that represents temperature.</p></li>
+<li><p>A unit for the temperature (either F or C)</p></li>
+</ul>
+</li>
+<li><p>Call a function that converts the temperature to the other unit.</p></li>
+<li><p>At the beginning of this block, you may want to add a new line (use <code class="docutils literal notranslate"><span class="pre">terminal</span> <span class="pre">new</span> <span class="pre">line</span></code> block) and a text block that prompts users to enter a number (use <code class="docutils literal notranslate"><span class="pre">terminal</span> <span class="pre">print</span> <span class="pre">text</span></code> block).</p></li>
+<li><p>Add a block to pause for 3 seconds (use <code class="docutils literal notranslate"><span class="pre">pause</span> <span class="pre">(ms)</span></code> block).</p></li>
+</ul>
+</li>
+<li><p><strong>Your function block</strong>, which:</p>
+<ul>
+<li><p>Converts the temperature to the other unit depending on what the users entered. You may want to use <code class="docutils literal notranslate"><span class="pre">if...else...</span></code> statement.</p></li>
+<li><p>Prints the outcome in the terminal (e.g., “72 degrees F is about 22.22 C.”).</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="hints">
+<h3>Hints:<a class="headerlink" href="#hints" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>To convert F to C, you can use the following equation: Temp_in_C = (temp_F/10 – 32) x 5/9
+<strong>Note:</strong> You should first divide the sensor reading by 10.</p></li>
+<li><p>BlocklyProp uses integer numbers. The floating point number option allows an integer value to be displayed as a decimal number. Since you may get float numbers after calculation, you may want to use a terminal print with float print in which you can define the number of digits (before the decimal) and the number of places (after the decimal).</p></li>
+<li><p>As an example, please watch this video: <a class="reference external" href="https://youtu.be/iIXOUj8WMWo">Example Video</a></p></li>
+<li><p>Here is an example of how you can create it:
+<img alt="Temperature Conversion" src="../../_images/lab4_pic1.png" /></p></li>
+</ul>
+</section>
+<section id="instruction-and-hints-for-reading-sensor-data">
+<h3>Instruction and Hints for Reading Sensor Data<a class="headerlink" href="#instruction-and-hints-for-reading-sensor-data" title="Permalink to this heading">#</a></h3>
+<ul>
+<li><p>The script should have two main blocks:</p></li>
+<li><p><strong>Main block</strong>:</p>
+<ul>
+<li><p>At the beginning of this block (before the loop), you may want to define a pre-defined variable called <code class="docutils literal notranslate"><span class="pre">k</span></code> with a value of 1 (<code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">1</span></code>).</p>
+<ul>
+<li><p>Then, print in the terminal:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>“Reading #” k
+</pre></div>
+</div>
+<p>In the first iteration, it will print Reading # 1</p>
+</li>
+</ul>
+</li>
+<li><p>Increment <code class="docutils literal notranslate"><span class="pre">k</span></code> at the end of the loop (<code class="docutils literal notranslate"><span class="pre">k</span> <span class="pre">=</span> <span class="pre">k</span> <span class="pre">+</span> <span class="pre">1</span></code>) or after the print statement. In this case, <code class="docutils literal notranslate"><span class="pre">k</span></code> will be updated at each iteration. So, in the second iteration, it will print Reading # 2</p></li>
+<li><p>A continuous loop (use <code class="docutils literal notranslate"><span class="pre">repeat</span> <span class="pre">forever</span></code> block) to read the sensor data</p>
+<ul class="simple">
+<li><p>Please note that the sensor is connected to pin 14.</p></li>
+<li><p>Please clear the screen (use <code class="docutils literal notranslate"><span class="pre">Terminal</span> <span class="pre">clear</span> <span class="pre">screen</span></code> block)</p></li>
+</ul>
+</li>
+<li><p>Call a function that converts the temperature to Centigrade.</p></li>
+<li><p>Print the sensor data:</p>
+<ul class="simple">
+<li><p>Print the reading number</p></li>
+<li><p>Print temperature in F</p></li>
+<li><p>Print temperature in C</p></li>
+<li><p>Print RH in percentage</p>
+<ul>
+<li><p>Please note that the RH read by the sensor is 10 times more than the actual RH, so you should divide it by 10.</p></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Print the outcome of the defined conditions (either turning on the AC or heater).</p></li>
+<li><p>Turn on one of the built-in LEDs based on the conditions mentioned above and make it blink 300 ms. If the condition is not true anymore, you should turn the LED off.</p></li>
+<li><p>Add a block to pause for 3 seconds (use <code class="docutils literal notranslate"><span class="pre">pause</span> <span class="pre">(ms)</span></code> block).</p></li>
+<li><p>After that, the terminal is deleted, and the new readings will be displayed.</p></li>
+</ul>
+</li>
+<li><p><strong>Your function block</strong>, which:</p>
+<ul class="simple">
+<li><p>Converts the temperature from F to C.</p></li>
+<li><p>Please note that the temperature read by the sensor is 10 times more than the actual temperature. So you need to first divide it by 10 and then put it in the equation for the conversion.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="useful-resources">
+<h3>Useful Resources<a class="headerlink" href="#useful-resources" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p><a class="reference external" href="https://learn.parallax.com/support/reference/propeller-blocklyprop-block-reference">Propeller BlocklyProp Block Reference</a></p></li>
+<li><p><a class="reference external" href="https://learn.parallax.com/support/reference/propeller-blocklyprop-block-reference/sensor/temp-humidity">Temp and RH sensor</a></p></li>
+<li><p><a class="reference external" href="https://learn.parallax.com/support/reference/propeller-blocklyprop-block-reference/sensor/temp-humidity/temperature-humidity">Temperature &amp; Humidity Sensor Wiring &amp; Example Code</a></p></li>
+<li><p><a class="reference external" href="https://www.google.com/url?sa=D&amp;q=https://learn.parallax.com/tutorials/language/blocklyprop/blink-light&amp;ust=1715910000000000&amp;usg=AOvVaw23VSEnvDybvirzeWjODn_8&amp;hl=en&amp;source=gmail">Make LED light on/off</a></p></li>
 </ul>
 </section>
 </section>
@@ -536,7 +591,7 @@ This project provides the opportunity to integrate several assignments we have b
         },
         kernelOptions: {
             name: "python3",
-            path: "./learning-modules/project"
+            path: "./learning-modules/lab4"
         },
         predefinedOutput: true
     }
@@ -562,6 +617,15 @@ This project provides the opportunity to integrate several assignments we have b
         <p class="prev-next-title">TAE 30 Blockly Programming</p>
       </div>
     </a>
+    <a class="right-next"
+       href="../project/project.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Smart pot: a small-scale controlled environment for plants</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
 </div>
                 </footer>
               
@@ -577,8 +641,14 @@ This project provides the opportunity to integrate several assignments we have b
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#project">Project</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#the-code-includes-a-main-block-and-eight-function-blocks-as-follows">The code includes a main block and eight function blocks as follows:</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lab-4">Lab 4</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-1">Programming 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#programming-2">Programming 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#what-to-submit">What to Submit</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instruction-and-hints-for-temperature-conversion">Instruction and hints for temperature conversion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#hints">Hints:</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#instruction-and-hints-for-reading-sensor-data">Instruction and Hints for Reading Sensor Data</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#useful-resources">Useful Resources</a></li>
 </ul>
 </li>
 </ul>
